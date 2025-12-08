@@ -1,9 +1,91 @@
-[Type Conversion](#type-conversion)
+# JavaScript Notes - Table of Contents
 
+## [🏠 Index](#index)
 
+### Basic Setup
+- [Linking .js file to .html file](#linking-js-file-to-html-file)
+- [Adding JavaScript to Websites](#adding-javascript-to-websites)
+- [User Interaction](#user-interaction)
+- [Creating an Alert Box Within the Browser](#creating-an-alert-box-within-the-browser)
+- [Different Versions of 'Console.log()'](#different-versions-of-consolelog)
+- [Comments](#comments)
+- [Populating the Webpage with Text Content Using Java](#populating-the-webpage-with-text-content-using-java)
 
+### Core Concepts
+- [Variables](#variables)
+  - [Variables Naming Conventions](#variables-naming-conventions)
+  - [Variable Keyword](#variable-keyword)
+  - [Declaration & Assignment](#declaration--assignment)
+  - [Declaring Variables](#declaring-variables)
+  - [Other Examples](#other-examples)
+  - [Using Template Literals with Variables](#using-template-literals-with-variables)
+- [Datatypes](#datatypes)
+  - [Datatypes in JavaScript](#datatypes-in-javascript)
+  - ["typeof("");" Statement](#typeof-statement)
+  - [Strings](#strings)
+  - [Booleans](#booleans)
+- [Type Conversion](#type-conversion)
+  - [String Variable Conversion](#string-variable-conversion)
+  - [Number Variable Conversion](#number-variable-conversion)
+  - [Empty Variable Conversion](#empty-variable-conversion)
+  - [Unassigned Variable Conversion](#unassigned-variable-conversion)
+  - [Datatype Conversion and Coercion](#datatype-conversion-and-coercion)
+  - [Truthy and Falsy Values](#truthy-and-falsy-values)
+- [Constants](#constants)
+  - [User Input Through Window Prompt](#user-input-through-window-prompt)
+  - [User Input Through HTML Textbox](#user-input-through-html-textbox)
+  - [String Concatenation](#string-concatenation)
 
-# Linking .js file to .html file
+### Control Structures
+- [If Statements](#if-statements)
+- [Switches](#switches)
+- [Logical Operators](#logical-operators)
+- [Strict Equality](#strict-equality)
+- [Ternary Operator](#ternary-operator)
+- [While Loops](#while-loops)
+
+### Operators and Math
+- [Arithmetic Operators](#arithmetic-operators)
+  - [Addition](#addition)
+  - [Subtraction](#subtraction)
+  - [Multiplication](#multiplication)
+  - [Division](#division)
+  - [Exponent](#exponent)
+  - [Modulus](#modulus)
+- [Augmented Assignment Operators](#augmented-assignment-operators)
+  - [Assignment Operators](#assignment-operators)
+- [Math Objects](#math-objects)
+  - [Rounding](#rounding)
+  - [Exponents and Roots](#exponents-and-roots)
+  - [Logarithms](#logarithms)
+  - [Trigonometric (Radian Input)](#trigonometric-radian-input)
+  - [Absolute Value and Sign](#absolute-value-and-sign)
+  - [Extremes](#extremes)
+
+### User Input and Interaction
+- [Accepting User Inputs](#accepting-user-inputs)
+  - [Window Prompt Method](#window-prompt-method)
+- [Checked Property](#checked-property)
+
+### String Operations
+- [String Methods](#string-methods)
+- [String Slicing](#string-slicing)
+- [Method Chaining](#method-chaining)
+
+### Arrays and Functions
+- [Spread Operator](#spread-operator)
+- [Rest Parameters](#rest-parameters)
+- [Callbacks](#callbacks)
+- [Foreach()](#foreach)
+- [.map()](#map)
+- [.filter()](#filter)
+- [.reduce()](#reduce)
+- [Function Expressions](#function-expressions)
+- [Arrow Functions](#arrow-functions)
+
+---
+
+# Linking .js file to .html file [[🏠]](#index)
 
 - This can be done using the pair of <script></script> tags along with the 'src' attributes.
 
@@ -16,7 +98,7 @@
 - It is better to have the <script></script> element at the bottom of the body of the document, so that in case there is any error with the JavaScript file, the html elements would atleast render first.
 
 
-# ADDING JAVASCRIPT TO WEBSITES
+# Adding JavaScript to Websites [[🏠]](#index)
 
 - There are three ways to add JavaScript to websites (same as in CSS).
 
@@ -47,7 +129,7 @@
     ```
 
 
-# USER INTERACTION
+# User Interaction [[🏠]](#index)
 
 ```js
 alert("Hello");
@@ -68,7 +150,7 @@ console.log("Hello");
 - We can log multiple values like this: `console.log(myName, myAge);`.
 
 
-# CREATING AN ALERT BOX WITHIN THE BROWSER
+# Creating an Alert Box Within the Browser [[🏠]](#index)
 
 - An alert box can be shown through the browser using `window.alert(``);`.
 
@@ -91,7 +173,7 @@ console.log("Hello");
 - This text will not show up on the actual webpage, and can instead be viewed in the console tabl of element/ 'Dev Tools' of a web browser:
 
 
-# DIFFERENT VERSIONS OF 'CONSOLE.LOG()'
+# Different Versions of 'Console.log()' [[🏠]](#index)
 
 ```js
 console.log();
@@ -104,7 +186,7 @@ console.table();
 ```
 
 
-# COMMENTS
+# Comments [[🏠]](#index)
 ```js
 // This is a comment
 
@@ -115,7 +197,7 @@ comment
 */
 ```
 
-# POPULATING THE WEBPAGE WITH TEXT CONTENT USING JAVA
+# Populating the Webpage with Text Content Using Java [[🏠]](#index)
 
 - This can be done using the `id` attribute for suitable tags that are used to display content on the webpage, e.g. <h1></h1>, <p></p>, and assigning unique identities for these tags.
 
@@ -178,7 +260,7 @@ comment
     1. **Declaration**: `let x;`
     2. **Assignment**: `x = 100;`
 
-## VARIABLES NAMING CONVENTIONS
+## Variables Naming Conventions
 
 1. They follow 'camelCase'
 2. Don't start variable names with an uppercase.
@@ -187,7 +269,7 @@ comment
 5. Cannot name a variable using a 'reserved' keyword (i.e. `new`, `name`, or `function`).
 6. Variable names with all uppercase are reserved for CONSTANTS that will never change (i.e. `let PI = 3.145;`).
 
-## VARIABLE KEYWORD
+## Variable Keyword
 
 - USE THESE VARIABLE KEYWORDS (these were introduced in ES6 [Modern JavaScript]):
 
@@ -222,7 +304,7 @@ console.log(x, y);
 ```
 - *OUTPUT*: 10 10
 
-## DECLARATION & ASSIGNMENT
+## Declaration & Assignment
 
 ```js
 let x;
@@ -262,7 +344,7 @@ let x = 100;
 
 - This method is most suitable if you already know what variables you want to be creating at when writing the program.
 
-## DECLARING VARIABLES
+## Declaring Variables
 
 - Don't use this `[]`.
 
@@ -272,7 +354,7 @@ var myName = "Mikel";
 
 - This is how you assign variables in JavaScript.
 
-## OTHER EXAMPLES
+## Other Examples
 
 ```js
 let age = 17;
@@ -290,7 +372,7 @@ let gpa = 2.1;
 
 - The variable `gpa` has now been assigned the value `2.1`.
 
-## USING TEMPLATE LITERALS WITH VARIABLES
+## Using Template Literals with Variables
 
 ```js
 let age = 17;
@@ -330,7 +412,7 @@ console.log(`The price is ${price}.`);
     - Strings
     - Booleans
 
-## DATATYPES IN JAVASCRIPT
+## Datatypes in JavaScript
 
 - JavaScript has dynamic typing, which means that we don't have to manually define data types of values stored in variables; unlike in C#, they are determined automatically.
 
@@ -360,7 +442,7 @@ myName= 9999;
 
 - We can also change the value to be a different data type, since JavaScript has dynamic typing.
 
-## "TYPEOF("");" STATEMENT
+## "typeof("");" Statement
 
 - Tells us the data types of the parameter/ argument in a pop-up message.
 
@@ -380,7 +462,7 @@ typeof(1+3);
 - *OUTPUT*: "number"
 
 
-## STRINGS
+## Strings
 
 - A series of characters.
 
@@ -428,7 +510,7 @@ console.log(`Your email is ${email}`);
 - Numbers can also be used for string variables, however, these numbers cannot be used in any math because string variables have a different nature to/ act differently to number variables.
 
 
-## BOOLEANS
+## Booleans
 
 - They are either 'True' or 'False'.
 
@@ -456,7 +538,7 @@ console.log(`Bro is online: ${online}`);
 - The console will display "Bro is online: false".
 
 
-### THEY ARE  USD AS A SORT OF FLAG
+### They are used as a sort of flag
 
 ```js
 let online = false;
@@ -489,7 +571,7 @@ console.log(`Is this student Enrolled: ${isStudent}`);
 - Not typically used as direct output, but instead used with 'if' statements.
 
 
-# TYPE CONVERSION
+# Type Conversion [[🏠]](#index)
 
 - Changing the datatype of a value to another.
 
@@ -559,7 +641,7 @@ console.log(typeof age);
 
 - (This is just evidence to the above explanation)
 
-## STRING VARIABLE CONVERSION
+## String Variable Conversion
 
 ```js
 let x = "Pizza";
@@ -598,7 +680,7 @@ console.log(typeof z);
 
 - When you convert any value within the [""] of the `let z = "Pizza";` statement to boolean, in the presence of the `console.log(z);`, the console will display 'true'.
 
-## NUMBER VARIABLE CONVERSION
+## Number Variable Conversion
 
 ```js
 let x = "0";
@@ -633,7 +715,7 @@ console.log(typeof z);
 
 - The console will display 'true' and 'boolean'.
 
-## EMPTY VARIABLE CONVERSION
+## Empty Variable Conversion
 
 ```js
 let x = "";
@@ -670,7 +752,7 @@ console.log(typeof z);
 
 - This is one way to know whether a user input is empty, because an empty user input is most likely an empty string, which can be considered '0', which is false in boolean. So, using this principle, a user can be alerted 'false' is returned when converted to boolean, which means the user input is empty/ user has not made an input.
 
-## UNASSIGNED VARIABLE CONVERSION
+## Unassigned Variable Conversion
 
 ```js
 let x;
@@ -705,7 +787,7 @@ console.log(typeof z);
 
 - The console will display 'false' and 'boolean'.
 
-## DATATYPE CONVERSION AND COERCION
+## Datatype Conversion and Coercion
 
 - Datatype conversion: This is when we manually convert from one datatype to another.
 
@@ -738,7 +820,7 @@ console.log(String(19));
 ```
 
 
-## TRUTHY AND FALSY VALUES
+## Truthy and Falsy Values
 
 - Falsy values: 
 
@@ -763,7 +845,7 @@ console.log(String(19));
     - These values are any number that is not zero, or any string that is not empty string ('').
 
 
-### CONVERSION TO BOOLEAN
+### Conversion to Boolean
 
 - `Boolean(0)` function converts whats inside its parameter to a Boolean.
 
@@ -794,7 +876,7 @@ console.log(Boolean(''));
 - *OUTPUT*: false
 
 
-### DATATYPE COERCION
+### Datatype Coercion
 
 - **Data coercion**: it is when JavaScript automatically converts datatypes from behind the scenes for us. 
 
@@ -878,7 +960,7 @@ console.log(5 + 6 + '4'+ 9 - 4 - 1);
 ```
 - *OUTPUT*: 1144
 
-## AUTOMATIC DATATYPE COERCION OF BOOLEANS BEHIND THE SCENES
+## Automatic Datatype Coercion of Booleans Behind the Scenes
 
 - JavaScript automatically converts to Booleans automatically behind the scenes (datatype coercion).
 
@@ -930,11 +1012,11 @@ if (height) {
 - Because height variable has a number value, which means it a truthy value that when converted to a boolean becomes true. Thus trigerring the if block.
 
 
-# CONSTANTS
+# Constants [[🏠]](#index)
 
 - Variables that cannot be changed after being assigned a value.
 
-## USER INPUT THROUGH WINDOW PROMPT
+## User Input Through Window Prompt
 
 ```js
 let pi = 3.14159;
@@ -1009,7 +1091,7 @@ console.log(circumference);
 
 - In other words, JavaScript does not allow the reassignment of constant after they have already been assigned once.
 
-## USER INPUT THROUGH HTML TEXTBOX
+## User Input Through HTML Textbox
 
 ```html
 <!DOCTYPE html>
@@ -1056,7 +1138,7 @@ console.log(mikel);
 ```
 - *OUTPUT*: Hello, my name is Mikel. I am 27 years old.
 
-### STRING CONCATENATION TO ADD UNITS
+### String Concatenation to Add Units
 
 ```html
 <!DOCTYPE html>
@@ -1090,7 +1172,7 @@ document.getElementById("mySubmit").onclick = function(){
 }
 ```
 
-### STRING CONCATENATION USING TEMPLATE LITERALS ``
+### String Concatenation Using Template Literals ``
 
 - Another easier way of combining strings and variables, which was introduced in ES6 [use '`…`'].
     
@@ -1105,7 +1187,7 @@ console.log(mikel2);
 - 'Hello, my name is Mikel. I am 28 years old.'
 
 
-# IF STATEMENTS
+# If Statements [[🏠]](#index)
 
 - `If` statements - if a condition is true, execute some code; if not, do something else.
 
@@ -1323,7 +1405,7 @@ mySubmit.onclick = function(){
     ```
 
 
-# SWITCHES
+# Switches [[🏠]](#index)
 
 - An efficient replacement to many else-if statements.
 
@@ -1422,7 +1504,7 @@ switch(dayNumber){
 - *OUTPUT*: pizza is not a day
 
 
-# LOGICAL OPERATORS
+# Logical Operators [[🏠]](#index)
 
 - Used to combine or manipulate boolean values (true or false)
 
@@ -1430,12 +1512,12 @@ switch(dayNumber){
     - OR = ||
     - NOT = !
 
-## AND (&&) OPERATOR
+## AND (&&) Operator
 
 - Used to check more than one condition;
 - Both conditions must be met to execute something.
 
-    ### WITHOUT LOGICAL OPERATORS
+### Without Logical Operators
 
     ```js
     const temp = 20;
@@ -1451,7 +1533,7 @@ switch(dayNumber){
     }
     ```
 
-    ### WITH LOGICAL OPERATORS
+### With Logical Operators
 
     ```js
     const temp = 20;
@@ -1464,7 +1546,7 @@ switch(dayNumber){
     }
     ```
 
-## OR (||) OPERATOR
+## OR (||) Operator
 
 - Only one condition has to be met to execute something.
 
@@ -1480,7 +1562,7 @@ else{
 }
 ```
 
-## NOT (!) OPERATOR
+## NOT (!) Operator
 
 - Switch a Boolean value from true -> false or from false -> true.
 
@@ -1495,7 +1577,7 @@ else{
 }
 ```
 
-# STRICT EQUALITY
+# Strict Equality [[🏠]](#index)
 
 
 
@@ -1639,7 +1721,7 @@ else{
 
 
 
-# ARITHMETIC OPERATORS
+# Arithmetic Operators [[🏠]](#index)
 
 - **Operands** - They are values, variables, etc.
 
@@ -1650,10 +1732,7 @@ else{
     11 = X + 5
 
     - 11, X, and 5 are **operands**.
-    - '+' is an **operator**.
-
-
-## ADDITION
+## Addition
 
 ```js
 let students = 30;
@@ -1667,14 +1746,7 @@ console.log(students);
 
 - This will display '31' in the  console, because 30 + 1 = 31.
 
-- Here, the `students` variable is being re-assigned by the value '31' because of the statement:
-
-    ```js
-    students = students + 1;
-    ```
-
-
-## SUBTRACTION
+## Subtraction
 
 ```js
 let students = 30;
@@ -1682,10 +1754,7 @@ students = students - 1;
 console.log(students);
 ```
 
-- This will display '29' in the console, because 30 - 1 = 29.
-
-
-## MULTIPLICATION
+## Multiplication
 
 ```js
 let students = 30;
@@ -1693,10 +1762,7 @@ students = students * 2
 console.log(students);
 ```
 
-- This will display '60' in the console, because 30 × 2 = 60.
-
-
-## DIVISION
+## Division
 
 ```js
 let students = 30;
@@ -1704,10 +1770,7 @@ students = students / 2
 console.log(students);
 ```
 
-- This will display '15' in the console, because 30 ÷ 2 = 15.
-
-
-## EXPONENT
+## Exponent
 
 ```js
 let students = 30;
@@ -1725,10 +1788,7 @@ students = students ** 3;
 console.log(students);
 ```
 
-- This will display '27000' in the console, because 30^3 = 27000 (also equal to 30 × 30 × 30 = 27,000).
-
-
-## MODULUS
+## Modulus
 
 ```js
 let students = 30;
@@ -1761,11 +1821,9 @@ console.log(extraStudents);
 - This will now still display '1' in the console (because the remainder is 1 when 31 is divided to 2 equal groups).
 
 
-# AUGMENTED ASSIGNMENT OPERATORS
+# Augmented Assignment Operators [[🏠]](#index)
 
-## ASSIGNMENT OPERATORS
-
-### ADDITION
+## Assignment Operators
 
 ```js
 let students = 30;
@@ -1777,9 +1835,7 @@ console.log(students);
 
 - [+] - **Addition operator**.
 
-- The console log will display '31' because 30 + 1 (from the arithmetic expression `students += 1;`) is 31.
-
-### SUBTRACTION
+### Subtraction
 
 ```js
 let students = 30;
@@ -1789,9 +1845,7 @@ console.log(students);
 
 - [-] - **Subtraction operator**.
 
-- The console log will display '29' because 30 - 1 (from the arithmetic expression `students -= 1;`) is 29.
-
-### MULTIPLICATION
+### Multiplication
 
 ```js
 let students = 30;
@@ -1801,9 +1855,7 @@ console.log(students);
 
 - [*] - **Multiplication operator**.
 
-- The console log will display '60' because 30 * 2 (from the arithmetic expression `students *= 1`) is 60.
-
-### DIVISON
+### Division
 
 ```js
 let students = 30;
@@ -1813,9 +1865,7 @@ console.log(students);
 
 - [/] - **Division operator**.
 
-- The console log will display '15' because 30 / 2 (from the arithmetic expression `students /= 1;`) is 15.
-
-### EXPONENT
+### Exponent
 
 ```js
 let students = 30;
@@ -1825,9 +1875,7 @@ console.log(students);
 
 - [**] - **Exponent operator**.
 
-- The console will display '900' because 302 (from the arithmetic expression `students **= 2;`) is 900 (also equal to 30 × 30 = 900).
-
-### MODULUS
+### Modulus
 
 ```js
 let students = 30;
@@ -1857,7 +1905,7 @@ console.log(students);
 
 - The console will display '1' (because 31 cannot be equally divided to two parts); this shows that 31 is an ***odd*** number.
 
-### INCREMENT AND DECREMENT
+### Increment and Decrement
 
 ```js
 let students = 30;
@@ -1883,7 +1931,7 @@ console.log(students);
 
 - The console will display '29', as 30 - 1 = 29 .
 
-### OPERATOR PRECEDENCE
+### Operator Precedence
 
 - Given a very complex equation, for example `let result = 1 + 2 * 3 + 4 ** 2;`, operator precedence is in which order each part of the equation is supposed to be solved.
 
@@ -1927,7 +1975,7 @@ console.log(result);
 - The console will display '0.046875'.
 
 
-# ACCEPTING USER INPUTS
+# Accepting User Inputs [[🏠]](#index)
 
 - Accepting user inputs:
 
@@ -1935,7 +1983,7 @@ console.log(result);
 
     - Professional method = HTML textbox with a button.
 
-## WINDOW PROMPT METHOD
+## Window Prompt Method
 
 - For this, `[variable] = window.prompt("[Text displayed on window prompt]");` statement is used.
 
@@ -1965,11 +2013,11 @@ console.log(username);
 - *For example:* If the user input was 'Ryomen Sukuna', then the console will display the text 'Ryomen Sukuna'.
 
 
-# MATH OBJECTS
+# Math Objects [[🏠]](#index)
 
 - `Math` - a built-in object that provides a collection of properties and methods.
 
-## ROUNDING
+## Rounding
 
 ```js
 let result = Math.round(value);
@@ -1984,7 +2032,7 @@ result = Math.trunc(value);
 - `.ceil()` - rounds up (toward +∞).
 - `.trunc()` - removes the decimal part (no rounding).
 
-## EXPONENTS AND ROOTS
+## Exponents and Roots
 
 ```js
 result = Math.pow(base, exponent);
@@ -1994,7 +2042,7 @@ result = Math.sqrt(value);
 - `.pow(base, exponent)` - base^exponent (e.g. 2^3 = 8).
 - `.sqrt()` - square root (e.g. √25 = 5).
 
-## LOGARITHMS
+## Logarithms
 
 ```js
 result = Math.log(value);
@@ -2002,7 +2050,7 @@ result = Math.log(value);
 
 - `.log()` - natural log (base e).
 
-## TRIGONOMETRIC (RADIAN INPUT)
+## Trigonometric (Radian Input)
 
 ```js
 result = Math.sin(radians);     // Sine of angle
@@ -2010,21 +2058,21 @@ result = Math.cos(radians);     // Cosine of angle
 result = Math.tan(radians);     // Tangent of angle
 ```
 
-## ABSOLUTE VALUE AND SIGN
+## Absolute Value and Sign
 
 ```js
 result = Math.abs(value);       // Removes negative sign
 result = Math.sign(value);      // Returns -1, 0, or 1
 ```
 
-## EXTREMES
+## Extremes
 ```js
 result = Math.max(v1, v2, v3);      // Largest of the values
 result = Math.min(v1, v2, v3);      // Smallest of the values
 ```
 
 
-# CHECKED PROPERTY
+# Checked Property [[🏠]](#index)
 
 - `.checked` - property that determines the checked state of an HTML checkbox or radio button element.
 
@@ -2102,7 +2150,7 @@ mySubmit.onclick = function(){
 ```
 
 
-# TERNARY OPERATOR
+# Ternary Operator [[🏠]](#index)
 
 - A shortcut to `if{}` and `else{}` statements.
 - Helps to assign a variable based on a condition.
@@ -2158,9 +2206,9 @@ console.log(`Your total is $${purchaseAmount - purchaseAmount * discount/100}`);
 -*OUTPUT*: Your total is $99
 
 
-# STRING METHODS
+# String Methods [[🏠]](#index)
 
-## GETTING THE FIRST CHARACTER OF A STRING
+## Getting the First Character of a String
 
 ```js
 let userName = "BroCode";
@@ -2174,7 +2222,7 @@ console.log(userName.charAt(2));    // 3rd character = 2, so on...
     r
     o
 
-## GETTING THE INDEX OF THE FIRST OCCURENCE OF A CHARACTER IN A STRING
+## Getting the Index of the First Occurrence of a Character in a String
 
 ```js
 let userName = "BroCode";
@@ -2183,7 +2231,7 @@ console.log(userName.indexOf("o"));
 ```
 - *OUTPUT*: 2
 
-## GETTING THE INDEX OF THE LAST OCCURENCE OF A CHARACTER IN A STRING
+## Getting the Index of the Last Occurrence of a Character in a String
 
 ```js
 let userName = "BroCode";
@@ -2192,7 +2240,7 @@ console.log(userName.lastIndexOf("o"));
 ```
 - *OUTPUT*: 4
 
-## GETTING THE LENGTH OF A STRING
+## Getting the Length of a String
 
 ```js
 let userName = "BroCode";
@@ -2201,7 +2249,7 @@ console.log(userName.length); // length is not necessarily a method, but is very
 ```
 - *OUTPUT*: 7
 
-## REMOVING WHITESPACE FROM A STRING
+## Removing Whitespace from a String
 
 ```js
 let userName2 = "   Bro Code ";
@@ -2210,7 +2258,7 @@ console.log(userName2.trim());
 ```
 -*OUTPUT*: Bro Code
 
-## CONVERTING LETTER CHARACTERS OF A STRING TO UPPERCASE
+## Converting Letter Characters of a String to Uppercase
 
 ```js
 let userName3 = "Bro Code";
@@ -2221,7 +2269,7 @@ console.log(userName3);
 ```
 - *OUTPUT*: BRO CODE
 
-## CONVERTING LETTER CHARACTERS OF A STRING TO LOWERCASE
+## Converting Letter Characters of a String to Lowercase
 
 ```js
 let userName4 = "BRO CODE";
@@ -2232,7 +2280,7 @@ console.log(userName4);
 ```
 - *OUTPUT*: bro code
 
-## REPEATING A STRING OF CHARACTERS
+## Repeating a String of Characters
 
 ```js
 let userName5 = "BroCode";
@@ -2250,7 +2298,7 @@ console.log(userName5r3);
     BroCodeBroCode
     BroCodeBroCodeBroCode
 
-## DETERMINING WHETHER A STRING STARTS WITH A SPECIFIC CHARACTER
+## Determining Whether a String Starts with a Specific Character
 
 ```js
 let userName6 = "BroCode";
@@ -2290,7 +2338,7 @@ else{
     true
     Your username cannot begin with an empty space ('')
 
-## DETERMINING WHETHER A STRING ENDS WITH A SPECIFIC CHARACTER
+## Determining Whether a String Ends with a Specific Character
 
 ```js
 let userName8 = "BroCode";
@@ -2328,7 +2376,7 @@ else{
     true
     Your username cannot end with an empty space (' ')
 
-## DETERMINING WHETHER THE STRING CONTAINS A SPECIFIC CHARACTER
+## Determining Whether the String Contains a Specific Character
 
 ```js
 let userName10 = "BroCode";
@@ -2366,7 +2414,7 @@ else{
     true
     Your username cannot contain an empty space (' ')
 
-## REPLACING CHARACTERS FROM A STRING 
+## Replacing Characters from a String 
 
 - `.replaceAll()`
 - `.replaceAll(<character-to-replace>, <replacement-character>)`
@@ -2389,7 +2437,7 @@ console.log(phoneNumber2);
 ```
 - *OPEN*: 987/654/321
 
-## PADDING STRING, STARTING FROM THE FRONT, WITH A SPECIFIC CHARACTER UNTIL THE MAX CHARACTER LIMIT OF THE STRING IS MET
+## Padding String, Starting from the Front, with a Specific Character Until the Max Character Limit of the String is Met
 
 - `.padStart()`
 - `.padStart(<character-limit-of-string>, "<character-to-pad-with>")`
@@ -2403,7 +2451,7 @@ console.log(phoneNumber3);
 ```
 -*OPEN*: 000123-456-7890
 
-# PADDING STRING, STARTING FROM THE BACK, WITH A SPECIFIC CHARACTER UNTIL THE MAX CHARACTER LIMIT OF THE STRING IS MET
+## Padding String, Starting from the Back, with a Specific Character Until the Max Character Limit of the String is Met
 
 -`.padEnd()`
 - `.padEnd(<character-limit-of-string>, "<character-to-pad-with>")`
@@ -2438,7 +2486,7 @@ console.log(lastName);
 - *OUTPUT*: Bro
             Code
 
-## NEGATIVE INDEX
+## Negative Index
 
 - You begin at the end, then you work your way towards the beginning by decreasing the number.
 
@@ -2452,7 +2500,7 @@ console.log(lastChar);
 -*OUTPUT*:  B
             e
 
-## STRING SLICING + INDEX SUBMETHOD
+## String Slicing + Index Submethod
 
 - This makes the above program more dynamic.
 
@@ -2466,7 +2514,7 @@ console.log(lastName1);
 -*OUTPUT*:  BroSeph
             Code
 
-## EXERCIES INCLUDING EMAILS
+## Exercises Including Emails
 
 ```js
 const email = "Bro1@gmail.com";
@@ -2479,11 +2527,11 @@ console.log(extension);
             gmail.com
 
 
-# METHOD CHAINING
+# Method Chaining [[🏠]](#index)
 
 - Calling one method after another in one continuous line of code.
 
-## NO METHOD CHAINING
+## No Method Chaining
 
 ```js
 let username = window.prompt("Enter your username: ");
@@ -2499,7 +2547,7 @@ username = letter + extraChars;
 window.alert(username);
 ```
 
-## WITH METHOD CHAINING
+## With Method Chaining
 
 ```js
 let username = window.prompt("Enter your username: ");
@@ -2512,7 +2560,7 @@ window.alert(username);
 - **TIP**: Don't overuse method chainingl it tends to get confusing.
 
 
-# WHILE LOOPS
+# While Loops [[🏠]](#index)
 
 - Repeats some code WHILE some condition true.
 
@@ -2589,7 +2637,7 @@ do {
 ```
 
 
-# SPREAD OPERATOR
+# Spread Operator [[🏠]](#index)
 
 - Spread operator = [-]
 
@@ -2672,7 +2720,7 @@ window.alert(foods);
 - *OUTPUT*: apple,orange,banana,carrots,celery,potatoes,eggs,milk
 
 
-# REST PARAMETERS
+# Rest Parameters [[🏠]](#index)
 
 - Rest parameters = `...rest`
 
@@ -2786,7 +2834,7 @@ console.log(fullName);
 - *OUTPUT*: Mr. Spongebob Squarepants III
 
 
-# CALLBACKS
+# Callbacks [[🏠]](#index)
 
 - `Callback` - a function that is passed as an argument to another function.
 
@@ -2875,7 +2923,7 @@ sum(displayPage, 1, 2);
     ```
 
 
-# FOREACH()
+# Foreach() [[🏠]](#index)
 
 - Method used to iterate over the elements of an array and apply a specified function (callback) to each element.
 
@@ -3058,7 +3106,7 @@ fruits.forEach(display);
             Coconut
 
 
-# .map()
+# .map() [[🏠]](#index)
 
 - Accepts a callback and applies that function to each element of an array, then returns a new array.
 
@@ -3142,7 +3190,7 @@ console.log(formattedDates);
 - *OUTPUT*: ['1/10/2024', '2/20/2025', '3/30/2026']
 
 
-# .filter()
+# .filter() [[🏠]](#index)
 
 - Creates a new array by filtering out elements.
 
@@ -3231,7 +3279,7 @@ console.log(longWords);
 - *OUTPUT*: ['pomegranate', 'coconut']
 
 
-# .reduce()
+# .reduce() [[🏠]](#index)
 
 - Reduces the elements of an array to a single value.
 
@@ -3278,7 +3326,7 @@ console.log(minimum);
 - *OUTPUT*: 50
 
 
-# FUNCTION EXPRESSIONS
+# Function Expressions [[🏠]](#index)
 
 - **Function declaration** -> defines a reusable block of code that performs a specific task.
 
@@ -3411,7 +3459,7 @@ console.log(total);
 - *OUTPUT*: 21
 
 
-# ARROW FUNCTIONS
+# Arrow Functions [[🏠]](#index)
 
 - A concise way to write function expressions.
 
