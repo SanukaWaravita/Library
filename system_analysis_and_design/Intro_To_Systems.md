@@ -18,7 +18,7 @@
 
 3. The General System Model (Diagram):
 
-![The_General_System_Model_Diagram](system_analysis_and_design\General_System_Model_Diagram.png "General_System_Model_Diagram")
+![The_General_System_Model_Diagram](General_System_Model_Diagram.png "General_System_Model_Diagram")
 
 4. Real-World Examples Table:
 
