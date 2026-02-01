@@ -1,56 +1,41 @@
-# 📚 Programming Library
+# 📚 Personal Knowledge Library
 
-A curated collection of programming notes and reference materials.
-
----
-
-## 📑 Table of Contents
-
-### 🧮 Mathematics & Statistics
-- [Bayes' Theorem](Bayes'_Theorem/testing.md)
-
-### 💻 JavaScript
-Comprehensive JavaScript reference covering fundamentals to advanced concepts:
-
-#### **Core Concepts**
-- [Basic Setup](javascript/Basic_Setup.md) - Getting started with JavaScript
-- [Variables](javascript/Variables.md) - Variable declarations and scope
-- [Constants](javascript/Constants.md) - Working with constant values
-- [Datatypes](javascript/Datatypes.md) - JavaScript data types overview
-
-#### **Operators**
-- [Arithmetic Operators](javascript/Arithmetic_Operators.md) - Mathematical operations
-- [Logical Operators](javascript/Logical_Operators.md) - Boolean logic
-- [Ternary Operator](javascript/Ternary_Operator.md) - Conditional expressions
-- [Strict Equality](javascript/Strict_Equality.md) - Comparison operators
-
-#### **Control Flow**
-- [If Statements](javascript/If_Statements.md) - Conditional logic
-- [Switches](javascript/Switches.md) - Switch statements
-- [While Loops](javascript/While_Loops.md) - Loop constructs
-
-#### **Built-in Features**
-- [String Methods](javascript/String_Methods.md) - String manipulation
-- [Array Functions](javascript/Array_Functions.md) - Array operations
-- [Math Objects](javascript/Math_Objects.md) - Mathematical functions
-- [Type Conversion](javascript/Type_Conversion.md) - Converting between types
-
-#### **User Interaction**
-- [User Input](javascript/User_Input.md) - Handling user input
-- [Checked Property](javascript/Checked_Property.md) - Working with checkboxes
-
-#### **Additional Resources**
-- [JavaScript Notes](javascript/javascript_notes.md) - Comprehensive notes and examples
+A comprehensive, organized collection of study notes and reference materials covering various computer science and programming topics. This repository serves as a centralized knowledge base for quick reference and continuous learning.
 
 ---
 
-## 🚀 Quick Navigation
+## 🎯 Purpose
 
-| Category | Topics Covered |
-|----------|----------------|
-| **Mathematics** | Probability, Bayes' Theorem |
-| **JavaScript** | 18+ topics covering syntax, operators, control flow, and more |
+This library is designed to:
+- **Document Learning** - Capture key concepts, syntax, and best practices across multiple domains
+- **Quick Reference** - Provide fast access to commonly needed information
+- **Knowledge Retention** - Consolidate notes from courses, tutorials, and practical experience
+- **Progressive Learning** - Build upon foundational concepts systematically
 
 ---
 
-**Last Updated:** January 2026
+## 📂 Main Topics
+
+### 💻 **JavaScript**
+Complete reference guide covering JavaScript fundamentals, including variables, operators, control flow, built-in methods, and user interaction patterns. Perfect for quick syntax lookups and concept reviews.
+
+### 🏢 **System Analysis and Design**
+Notes on systems thinking, system types and classifications, and system modeling approaches. Covers theoretical foundations and practical frameworks for understanding and designing systems.
+
+---
+
+## 📑 [View Complete Index](index.md)
+
+Browse the full catalog of notes organized by topic and subtopic.
+
+---
+
+## 🚀 Getting Started
+
+1. Use the [index](index.md) to navigate to specific topics
+2. Each note is self-contained with explanations and examples
+3. Topics build progressively from fundamentals to advanced concepts
+
+---
+
+**Last Updated:** February 2026
