@@ -23,7 +23,6 @@
 4. **Real-World Examples Table:**
 
 | System| Input| Process| Output| Feedback Mechanism|
-|----------------------|------------------------------------------|--------------------------------------------------------------|------------------------------------------|--------------------------------------------------------------------------|
 | ATM| Card, PIN, Request| Verify account, Check balance, Dispense logic| Cash, Receipt, Updated balance| Screen displays success/failure; receipt confirms transaction|
 | Traffic Light Control| Vehicle sensor data, Time of day| Timing algorithm, Priority logic| Red/Yellow/Green signals| Traffic cameras monitor flow; timers adjust based on congestion|
 | University LMS| Student login, Assignment upload| Authentication, File storage, Grade calculation| Course content, Grades, Notifications| Student performance data used to adjust teaching materials|
