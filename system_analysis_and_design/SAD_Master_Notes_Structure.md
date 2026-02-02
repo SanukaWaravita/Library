@@ -1,17 +1,5 @@
 system_analysis_and_design/
 ├── README.md                    # Overview, TOC, learning objectives
-├── 01-Foundations-Core-Concepts/
-│   ├── 01-What-is-a-System.md
-│   ├── 02-System-Types-Classification.md
-│   ├── 03-General-System-Model.md
-│   ├── 04-Introduction-to-SAD.md
-│   ├── 05-Systems-Analyst-Role.md
-│   ├── 06-SDLC-Overview.md
-│   ├── 07-AsIs-vs-ToBe-Analysis.md
-│   ├── 08-MoSCoW-Prioritization.md
-│   ├── 09-SMART-Criteria.md
-│   ├── 10-User-Stories-Atomic.md
-│   └── 11-Requirements-Types-Preview.md
 ├── 02-SDLC-Models-Methodologies/
 │   ├── 01-Traditional-Sequential-Models.md
 │   ├── 02-Waterfall-Model.md
