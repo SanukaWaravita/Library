@@ -70,7 +70,7 @@ Implementation & Solution
 
 ***Tag:*** *#Roles #Skills #Career*
 
-## 1. Who is a Systems Analyst?
+1. Who is a Systems Analyst?
 
 - **The Bridge:** A professional who translates business problems into technical solutions.
     
@@ -78,7 +78,7 @@ Implementation & Solution
     
 - **The Facilitator:** Guides stakeholders from problem recognition to implemented solution.
 
-## 2. Key Responsibilities:
+2. Key Responsibilities:
 
 - **Requirement Elicitation:** Interview users, conduct workshops, gather needs.
 
@@ -92,7 +92,7 @@ Implementation & Solution
 
 - **Project Support:** Assist in planning, testing, implementation, and training.
 
-## 3. Core Roles of an Analyst:
+3. Core Roles of an Analyst:
 
 - **Change Agent:** Drives organizational improvement through technology.
 
@@ -102,7 +102,7 @@ Implementation & Solution
 
 - **Project Collaborator:** Works within a team (PMs, developers, testers, users).
 
-## 4. Essential Skill Set (The Analyst's Toolkit):
+4. Essential Skill Set (The Analyst's Toolkit):
 
 | Skill Category | Specific Skills | Why It Matters |
 |---|---|---|
@@ -112,7 +112,7 @@ Implementation & Solution
 | Interpersonal | Activve listening, Interviewing, Facilitaation, Negotiation | To extract true needs and manage stakeholder expactions | 
 | Communication | Technical writing, Presentation, Visualization, Digramming | To create clear, unambiguous documentation and specs |
 
-## 5. 5 Skills Every Analyst Should Master
+5. 5 Skills Every Analyst Should Master
 
 - **Active Listening:** Hear what's said and unsaid.
 
@@ -124,7 +124,7 @@ Implementation & Solution
 
 - **Technical Literacy:** Understand enough tech to be credible and make sound decisions.
 
-## 6. Tools Used by Systems Analysts:
+6. Tools Used by Systems Analysts:
 
 - **Modeling Tools:** Visio, Lucidchart, Enterprise Architect, Draw.io
     
@@ -136,7 +136,7 @@ Implementation & Solution
     
 - **CASE Tools:** _
 
-## 7. Career Path & Context:
+7. Career Path & Context:
 
 - **Entry-Level:** Junior/Business Analyst → Mid-Level: Systems Analyst → Senior: Lead Analyst, Solutions Architect
     
@@ -144,7 +144,7 @@ Implementation & Solution
 
 - **Fintech Note:** As mentioned in lectures—high responsibility (24/7 support zones) = higher pay.
 
-## 8. Links:
+8. Links:
 
 - **Back to:** [1.4 Introduction to SAD]()
 
