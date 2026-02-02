@@ -1,6 +1,8 @@
 # Local development files
 project-todo.md
 improvements-by-code-rabbit/
+documents\SAD_Note_Refinement_prompt.md
+system_analysis_and_design\SAD-Refinement-Checklist.md
 
 # IDE and Editor files
 .vscode/
