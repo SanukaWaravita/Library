@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal Knowledge Library - A comprehensive collection of study notes and reference materials covering computer science and programming topics.">
+    <meta name="keywords" content="programming, JavaScript, system analysis, design, notes, reference, learning">
+    <meta name="author" content="Personal Knowledge Library">
+    <title>📚 Personal Knowledge Library</title>
+    <style>
+        /* ===== CSS Variables ===== */
+        :root {
+            /* Colors */
+            --primary-bg: #ffffff;
+            --secondary-bg: #f8f9fa;
+            --accent-bg: #e9ecef;
+            --text-primary: #212529;
+            --text-secondary: #6c757d;
+            --text-muted: #adb5bd;
+            --accent-blue: #0d6efd;
+            --accent-purple: #6f42c1;
+            --accent-green: #198754;
+            --border-color: #dee2e6;
+            --hover-bg: #f1f3f5;
+            --shadow-light: rgba(0, 0, 0, 0.05);
+            --shadow-medium: rgba(0, 0, 0, 0.1);
+            
+            /* Typography */
+            --font-primary: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+            
+            /* Spacing */
+            --space-2: 0.5rem;
+            --space-3: 0.75rem;
+            --space-4: 1rem;
+            --space-5: 1.5rem;
+            --space-6: 2rem;
+            --space-8: 3rem;
+            --space-10: 4rem;
+            
+            /* Borders */
+            --radius-sm: 0.25rem;
+            --radius-md: 0.5rem;
+            --radius-lg: 0.75rem;
+        }
+        
+        /* ===== Reset & Base Styles ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-primary);
+            color: var(--text-primary);
+            background-color: var(--primary-bg);
+            line-height: 1.6;
+            font-size: 16px;
+        }
+        
+        /* ===== Container ===== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-4);
+        }
+        
+        /* ===== Header ===== */
+        header {
+            background-color: var(--primary-bg);
+            border-bottom: 1px solid var(--border-color);
+            padding: var(--space-4) 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.95);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: var(--space-4);
+        }
+        
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            padding: var(--space-2) var(--space-3);
+            border-radius: var(--radius-sm);
+            transition: all 0.2s ease;
+            font-weight: 500;
+        }
+        
+        nav a:hover {
+            background-color: var(--hover-bg);
+            color: var(--text-primary);
+        }
+        
+        /* ===== Hero Section ===== */
+        .hero {
+            text-align: center;
+            padding: var(--space-10) 0 var(--space-8) 0;
+            background: linear-gradient(135deg, var(--secondary-bg) 0%, var(--primary-bg) 100%);
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: var(--space-4);
+            color: var(--text-primary);
+            font-weight: 700;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: var(--space-6);
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-8);
+            margin-top: var(--space-6);
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-blue);
+            display: block;
+        }
+        
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: var(--space-2);
+        }
+        
+        /* ===== Main Content ===== */
+        main {
+            padding: var(--space-8) 0;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: var(--space-6);
+            text-align: center;
+            color: var(--text-primary);
+            font-weight: 700;
+        }
+        
+        /* ===== Topic Cards Grid ===== */
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: var(--space-6);
+            margin-bottom: var(--space-10);
+        }
+        
+        .topic-card {
+            background-color: var(--secondary-bg);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: var(--space-6);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+            min-height: 280px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .topic-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px var(--shadow-medium);
+            border-color: var(--accent-blue);
+        }
+        
+        .topic-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .topic-card:hover::before {
+            opacity: 1;
+        }
+        
+        .topic-card.javascript::before {
+            background: linear-gradient(90deg, #6f42c1, #8b5cf6);
+        }
+        
+        .topic-card.system-analysis::before {
+            background: linear-gradient(90deg, #198754, #20c997);
+        }
+        
+        .topic-icon {
+            font-size: 3rem;
+            margin-bottom: var(--space-4);
+            display: block;
+        }
+        
+        .topic-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: var(--space-3);
+        }
+        
+        .topic-description {
+            color: var(--text-secondary);
+            margin-bottom: var(--space-4);
+            line-height: 1.7;
+        }
+        
+        .topic-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+            padding-top: var(--space-4);
+        }
+        
+        .topic-count {
+            background-color: var(--accent-bg);
+            color: var(--text-secondary);
+            padding: var(--space-2) var(--space-3);
+            border-radius: var(--radius-md);
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+        
+        .topic-link {
+            color: var(--accent-blue);
+            font-weight: 600;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+        }
+        
+        .topic-link::after {
+            content: '→';
+            transition: transform 0.2s ease;
+        }
+        
+        .topic-card:hover .topic-link::after {
+            transform: translateX(4px);
+        }
+        
+        /* ===== Quick Access Section ===== */
+        .quick-access {
+            background-color: var(--secondary-bg);
+            border-radius: var(--radius-lg);
+            padding: var(--space-6);
+            text-align: center;
+            margin-bottom: var(--space-8);
+        }
+        
+        .quick-access h2 {
+            font-size: 1.5rem;
+            margin-bottom: var(--space-4);
+            color: var(--text-primary);
+        }
+        
+        .quick-access-buttons {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-4);
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: var(--space-3) var(--space-6);
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+        }
+        
+        .btn-primary {
+            background-color: var(--accent-blue);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: #0b5ed7;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px var(--shadow-medium);
+        }
+        
+        .btn-secondary {
+            background-color: var(--primary-bg);
+            color: var(--accent-blue);
+            border: 2px solid var(--accent-blue);
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--accent-blue);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        /* ===== Footer ===== */
+        footer {
+            background-color: var(--secondary-bg);
+            border-top: 1px solid var(--border-color);
+            padding: var(--space-6) 0;
+            margin-top: var(--space-10);
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: var(--space-4);
+        }
+        
+        .footer-info {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: var(--space-4);
+        }
+        
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent-blue);
+        }
+        
+        /* ===== Responsive Design ===== */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 1rem;
+            }
+            
+            .stats {
+                gap: var(--space-4);
+            }
+            
+            .stat-number {
+                font-size: 1.5rem;
+            }
+            
+            nav ul {
+                gap: var(--space-2);
+            }
+            
+            .topics-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .quick-access-buttons {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 1.25rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: var(--space-2);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <span>📚</span>
+                    <span>Knowledge Library</span>
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="index.md">Complete Index</a></li>
+                        <li><a href="README.md">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>📚 Personal Knowledge Library</h1>
+            <p class="subtitle">
+                A comprehensive, organized collection of study notes and reference materials 
+                covering computer science and programming topics. Your centralized knowledge base 
+                for quick reference and continuous learning.
+            </p>
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-number">22+</span>
+                    <span class="stat-label">Topics</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">2</span>
+                    <span class="stat-label">Categories</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">Feb 2026</span>
+                    <span class="stat-label">Last Updated</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <h2 class="section-title">📂 Explore Topics</h2>
+            
+            <!-- Topics Grid -->
+            <div class="topics-grid">
+                <!-- JavaScript Card -->
+                <a href="javascript/index.html" class="topic-card javascript">
+                    <span class="topic-icon">💻</span>
+                    <h3 class="topic-title">JavaScript</h3>
+                    <p class="topic-description">
+                        Complete reference guide covering JavaScript fundamentals, including variables, 
+                        operators, control flow, built-in methods, and user interaction patterns. 
+                        Perfect for quick syntax lookups and concept reviews.
+                    </p>
+                    <div class="topic-meta">
+                        <span class="topic-count">18 Topics</span>
+                        <span class="topic-link">Explore</span>
+                    </div>
+                </a>
+
+                <!-- System Analysis Card -->
+                <a href="system_analysis_and_design/index.html" class="topic-card system-analysis">
+                    <span class="topic-icon">🏢</span>
+                    <h3 class="topic-title">System Analysis & Design</h3>
+                    <p class="topic-description">
+                        Notes on systems thinking, system types and classifications, and system modeling 
+                        approaches. Covers theoretical foundations and practical frameworks for understanding 
+                        and designing systems.
+                    </p>
+                    <div class="topic-meta">
+                        <span class="topic-count">3 Topics</span>
+                        <span class="topic-link">Explore</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Quick Access -->
+            <div class="quick-access">
+                <h2>🚀 Quick Access</h2>
+                <div class="quick-access-buttons">
+                    <a href="index.md" class="btn btn-primary">
+                        <span>📑</span>
+                        <span>View Complete Index</span>
+                    </a>
+                    <a href="README.md" class="btn btn-secondary">
+                        <span>ℹ️</span>
+                        <span>About This Library</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Purpose Section -->
+            <section style="max-width: 800px; margin: 0 auto; padding: var(--space-6); background: var(--secondary-bg); border-radius: var(--radius-lg);">
+                <h2 style="text-align: center; margin-bottom: var(--space-4); color: var(--text-primary);">🎯 Purpose</h2>
+                <ul style="list-style: none; color: var(--text-secondary); line-height: 2;">
+                    <li><strong style="color: var(--text-primary);">📝 Document Learning</strong> - Capture key concepts, syntax, and best practices across multiple domains</li>
+                    <li><strong style="color: var(--text-primary);">⚡ Quick Reference</strong> - Provide fast access to commonly needed information</li>
+                    <li><strong style="color: var(--text-primary);">🧠 Knowledge Retention</strong> - Consolidate notes from courses, tutorials, and practical experience</li>
+                    <li><strong style="color: var(--text-primary);">📈 Progressive Learning</strong> - Build upon foundational concepts systematically</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    © 2026 Personal Knowledge Library | Last Updated: February 2, 2026
+                </div>
+                <div class="footer-links">
+                    <a href="index.md">Index</a>
+                    <a href="README.md">README</a>
+                    <a href="https://github.com" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
