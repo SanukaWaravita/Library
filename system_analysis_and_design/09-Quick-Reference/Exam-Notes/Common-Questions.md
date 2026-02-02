@@ -9,8 +9,8 @@
 - **Analysis:** What the system should do (requirements gathering)
 - **Design:** How the system will do it (architecture, components, interfaces)
 
-### Q: Explain the difference between functional and non-functional requirements.
-**A:** Functional requirements describe what the system must do (features, capabilities), while non-functional requirements describe how well the system performs (quality attributes).
+### Q: Explain the difference between functional and Non-Functional requirements.
+**A:** Functional requirements describe what the system must do (features, capabilities), while Non-Functional requirements describe how well the system performs (quality attributes).
 
 **Examples:**
 - **Functional:** "User can search products by category"

@@ -53,7 +53,7 @@ flowchart TD
 
 | Activity | Techniques | Deliverables | Quality Criteria |
 |----------|-----------|-------------|------------------|
-| **Classification** | Functional vs non-functional, priority assignment | Categorized requirements matrix | Complete coverage, clear categories |
+| **Classification** | Functional vs Non-Functional, priority assignment | Categorized requirements matrix | Complete coverage, clear categories |
 | **Prioritization** | MoSCoW, Kano model, cost-benefit analysis | Prioritized backlog | Stakeholder agreement, business value focus |
 | **Conflict Resolution** | Negotiation, trade-off analysis, stakeholder workshops | Resolved requirements list | No contradictions, feasible scope |
 | **Specification Writing** | Structured templates, acceptance criteria | Requirements specification document | Testable, unambiguous, complete |
@@ -292,3 +292,10 @@ flowchart TD
 ---
 
 **Key Takeaway:** Effective requirements engineering requires systematic processes, clear communication, and quality assurance to ensure the final system meets stakeholder needs and business objectives.
+
+## Related Concepts
+
+- **Previous:** [Project Scoping & MoSCoW](../../03-Project-Initiation-Planning/03-Project-Scoping-MoSCoW.md)
+- **Next:** [Business Requirements & SMART Criteria](02-Business-Requirements-SMART.md)
+- **See Also:** [Requirements Elicitation Guide](../../09-Quick-Reference/Requirements-Elicitation-Techniques-Guide.md)
+- **Foundation:** [Introduction to SAD](../../Foundations%20and%20Core%20Concepts/1.4%20-%20intro_to_sad.md)
