@@ -1,33 +1,56 @@
-# 01 - Requirements Fundamentals
+# Requirements Engineering Fundamentals
+
+**Tags:** #RequirementsEngineering #Fundamentals #Elicitation #Analysis #Specification
+**Last Reviewed:** February 2, 2026
+
+---
 
 ## Overview
 
-Requirements engineering is the process of discovering, documenting, and maintaining requirements for a software system. It bridges the gap between user needs and system implementation, ensuring the final product meets stakeholder expectations.
+**Requirements Engineering** is the disciplined process of discovering, documenting, and maintaining requirements for a software system. It serves as the critical bridge between user needs and system implementation, ensuring the final product meets stakeholder expectations.
+
+**Core Purpose:** Transform vague business problems into precise, implementable system specifications.
+
+```mermaid
+flowchart TD
+    A[Stakeholder Needs] --> B[Requirements Elicitation]
+    B --> C[Requirements Analysis]
+    C --> D[Requirements Specification]
+    D --> E[Requirements Validation]
+    E --> F[Requirements Management]
+    F -.->|"Change Control"| B
+    
+    style A fill:#ffebee
+    style B fill:#e8f5e8
+    style C fill:#e3f2fd
+    style D fill:#fff3e0
+    style E fill:#f3e5f5
+    style F fill:#fce4ec
+```
 
 ## Requirements Engineering Process
 
-### 1. Requirements Elicitation
-**Activities:**
-- Stakeholder identification and analysis
-- Requirement gathering through interviews, workshops, and observation
-- Existing system analysis and user feedback collection
-- Market research and competitive analysis
+### Process Overview
 
-**Techniques:**
-- Interviews and questionnaires
-- Focus groups and workshops
-- Prototyping and demonstrations
-- Use case development
-- Observation and ethnography
+| Phase | Primary Goal | Key Activities | Typical Duration |
+|-------|-------------|----------------|------------------|
+| **1. Elicitation** | Discover requirements | Stakeholder interviews, workshops, observation | 25-35% |
+| **2. Analysis** | Understand and organize | Classification, prioritization, conflict resolution | 20-30% |
+| **3. Specification** | Document precisely | Write formal specifications, create models | 20-25% |
+| **4. Validation** | Verify correctness | Reviews, prototyping, user acceptance | 15-20% |
+| **5. Management** | Control changes | Version control, traceability, change requests | Ongoing |
 
-### 2. Requirements Analysis and Specification
-**Activities:**
-- Requirement classification and prioritization
-- Conflict resolution and negotiation
-- Requirement validation and verification
-- Formal specification development
+### 1. Requirements Elicitation 🗣️
 
-**Deliverables:**
+**Primary Goal:** *"Discover what stakeholders really need"*
+
+| Activity Type | Techniques | When to Use | Pros & Cons |
+|---------------|------------|-------------|-------------|
+| **Direct Communication** | Interviews, questionnaires, surveys | Clear stakeholders identified | ✅ Deep insights ❌ Time-intensive |
+| **Group Techniques** | Workshops, focus groups, brainstorming | Multiple stakeholders, consensus needed | ✅ Collaborative ❌ Groupthink risk |
+| **Observational** | Job shadowing, ethnography | Complex workflows, tacit knowledge | ✅ Real context ❌ Observer bias |
+| **Analytical** | Document analysis, system study | Existing systems, regulations | ✅ Comprehensive ❌ May miss innovation |
+| **Creative** | Prototyping, scenarios, storyboards | Unclear requirements, innovation | ✅ Visual clarity ❌ Resource intensive |
 - Requirements specification document
 - Use case specifications
 - Requirements traceability matrix

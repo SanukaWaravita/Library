@@ -1,34 +1,48 @@
-# 06 - Agile Methodology
+# Agile Methodology
+
+**Tags:** #SDLC #Agile #Iterative #Flexible #Scrum #CustomerCollaboration
+**Last Reviewed:** February 2, 2026
+
+---
 
 ## Overview
 
-Agile Methodology is an iterative and incremental approach to software development that emphasizes flexibility, collaboration, and customer satisfaction. It focuses on delivering working software frequently and responding to changing requirements.
+**Agile Methodology** is an iterative and incremental approach to software development that emphasizes **flexibility, collaboration, and customer satisfaction**. It focuses on delivering working software frequently and responding effectively to changing requirements.
 
-## Core Principles (Agile Manifesto)
+**Core Philosophy:** *"Embrace change, deliver value early and often, prioritize people over processes."*
 
-### 1. Individuals and Interactions over Processes and Tools
-- People and communication valued over rigid processes
-- Team collaboration emphasized
-- Face-to-face communication preferred
-- Flexible tool adoption
+```mermaid
+flowchart LR
+    A[Plan] --> B[Design]
+    B --> C[Code]
+    C --> D[Test]
+    D --> E[Review]
+    E --> F[Deploy]
+    F -.->|"Next Iteration"| A
+    
+    style A fill:#e3f2fd
+    style B fill:#f3e5f5
+    style C fill:#e8f5e8
+    style D fill:#fff3e0
+    style E fill:#fce4ec
+    style F fill:#f1f8e9
+```
 
-### 2. Working Software over Comprehensive Documentation
-- Functional software prioritized over extensive documentation
-- "Working software is the primary measure of progress"
-- Minimal necessary documentation
-- Just enough documentation approach
+## The Agile Manifesto: Core Values
 
-### 3. Customer Collaboration over Contract Negotiation
-- Active customer involvement throughout development
-- Collaborative relationship building
-- Regular feedback and adjustment
-- Partnership approach
+| Agile Values | Traditional Emphasis | Agile Emphasis | Impact |
+|--------------|---------------------|----------------|--------|
+| **Individuals & Interactions** | ← Processes and Tools | People and communication valued over rigid processes | Enhanced team collaboration, faster problem-solving |
+| **Working Software** | ← Comprehensive Documentation | Functional software prioritized over extensive docs | Faster value delivery, customer satisfaction |
+| **Customer Collaboration** | ← Contract Negotiation | Active customer involvement throughout development | Better requirement understanding, reduced rework |
+| **Responding to Change** | ← Following a Plan | Embracing changing requirements as competitive advantage | Market adaptability, innovation enablement |
 
-### 4. Responding to Change over Following a Plan
-- Embracing changing requirements
-- Adaptive planning processes
-- Flexibility in responding to change
-- Change as competitive advantage
+### Key Mindset Shifts
+
+🔄 **From** "Plan everything upfront" ➡️ **To** "Plan as you learn"  
+🔄 **From** "Document everything" ➡️ **To** "Document what adds value"  
+🔄 **From** "Follow the contract" ➡️ **To** "Collaborate for success"  
+🔄 **From** "Stick to the plan" ➡️ **To** "Adapt to reality"
 
 ## Agile Frameworks
 

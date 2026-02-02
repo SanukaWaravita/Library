@@ -1,29 +1,65 @@
-# 03 - V-Model
+# V-Model (Verification & Validation Model)
+
+**Tags:** #SDLC #VModel #Testing #Verification #Validation #QualityAssurance
+**Last Reviewed:** February 2, 2026
+
+---
 
 ## Overview
 
-The V-Model (Verification and Validation Model) is an extension of the Waterfall Model that emphasizes testing throughout the development lifecycle. It creates a V-shaped diagram where each development phase has a corresponding testing phase, ensuring quality is built into every stage.
+The **V-Model** (Verification and Validation Model) is an extension of the Waterfall Model that emphasizes **testing throughout the development lifecycle**. It creates a V-shaped diagram where each development phase has a corresponding testing phase, ensuring quality is built into every stage.
+
+**Key Philosophy:** *"Quality cannot be tested in; it must be built in."*
 
 ## Core Concept
 
-### V-Shaped Structure
-```
-Requirements ──────────────────── Acceptance Testing
-    │                                   │
-    ├── System Design ─────────── System Testing
-    │       │                       │
-    │       ├── Architecture ──── Integration Testing
-    │       │       │               │
-    │       │       └── Module ─── Unit Testing
-    │       │               │
-    │       └── Detailed ──── Component Testing
-    │               │
-    └── User Requirements ──── User Acceptance Testing
+### V-Shaped Architecture
+
+```mermaid
+flowchart TB
+    subgraph "Left Side: Development"
+        A[Requirements Analysis]
+        B[System Design]
+        C[Architecture Design]
+        D[Module Design]
+        E[Implementation]
+    end
+    
+    subgraph "Right Side: Testing"
+        F[User Acceptance Testing]
+        G[System Testing]
+        H[Integration Testing]
+        I[Unit Testing]
+    end
+    
+    A -.->|"Plans & Validates"| F
+    B -.->|"Plans & Validates"| G
+    C -.->|"Plans & Validates"| H
+    D -.->|"Plans & Validates"| I
+    
+    A --> B --> C --> D --> E
+    E --> I --> H --> G --> F
+    
+    style A fill:#e3f2fd
+    style B fill:#f3e5f5
+    style C fill:#e8f5e8
+    style D fill:#fff3e0
+    style E fill:#fce4ec
+    style F fill:#e3f2fd
+    style G fill:#f3e5f5
+    style H fill:#e8f5e8
+    style I fill:#fff3e0
 ```
 
-### Verification vs Validation
-- **Verification:** "Are we building the product right?"
-- **Validation:** "Are we building the right product?"
+### Verification vs. Validation
+
+| Aspect | Verification | Validation |
+|--------|-------------|------------|
+| **Question** | "Are we building the product right?" | "Are we building the right product?" |
+| **Focus** | Process correctness | Product correctness |
+| **When** | During development phases | At completion of phases |
+| **Methods** | Reviews, inspections, walkthroughs | Testing, demonstrations, user feedback |
+| **Goal** | Ensure compliance with specifications | Ensure user needs are met |
 
 ## Detailed Phases
 
