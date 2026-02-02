@@ -69,17 +69,49 @@ flowchart TD
 | **Maintenance** | 15-25% annually | **Strategic Value** | Market positioning, competitiveness |
 - **Training Requirements:** User training and support needs
 
-### Legal Feasibility
-- **Regulatory Compliance:** Legal and regulatory requirements
-- **Intellectual Property:** IP rights and licensing considerations
-- **Data Privacy:** Privacy laws and data protection
-- **Contractual Obligations:** Legal agreements and contracts
+### Legal & Compliance Feasibility ⚖️
 
-### Schedule Feasibility
-- **Time Constraints:** Project timeline requirements
-- **Resource Availability:** Team and resource availability
-- **Dependencies:** External factor dependencies
-- **Milestone Achievement:** Realistic deadline assessment
+**Compliance Assessment Matrix:**
+
+| Compliance Area | Risk Level | Requirements | Timeline Impact | Cost Impact |
+|----------------|-----------|-------------|----------------|-------------|
+| **Regulatory Compliance** | High | Industry-specific regulations (FDA, SOX, GDPR) | 3-6 months | 15-25% of budget |
+| **Intellectual Property** | Medium | Patent research, licensing agreements | 1-3 months | 5-15% of budget |
+| **Data Privacy** | High | HIPAA, GDPR, state privacy laws | 2-4 months | 10-20% of budget |
+| **Contractual Obligations** | Medium | Existing agreements, vendor contracts | 1-2 months | 5-10% of budget |
+
+### Schedule Feasibility 🗺️
+
+**Timeline Risk Assessment:**
+
+```mermaid
+flowchart TD
+    A[Schedule Analysis] --> B{Time Constraints}
+    B -->|Fixed Deadline| C[Critical Path Analysis]
+    B -->|Flexible| D[Resource Optimization]
+    
+    C --> E{Dependencies}
+    D --> E
+    
+    E -->|External| F[Vendor Management]
+    E -->|Internal| G[Resource Planning]
+    
+    F --> H[Schedule Risk: HIGH]
+    G --> I[Schedule Risk: MEDIUM]
+    
+    H --> J[Mitigation Required]
+    I --> K[Monitor & Control]
+    
+    style H fill:#ffebee
+    style I fill:#fff3e0
+    style J fill:#fce4ec
+```
+
+**Critical Success Factors:**
+- **Resource Availability:** Dedicated team members when needed
+- **External Dependencies:** Third-party deliverables and approvals
+- **Milestone Realism:** Achievable deadlines with buffer time
+- **Risk Buffers:** 15-25% schedule contingency for unknowns
 
 ## Feasibility Study Process
 

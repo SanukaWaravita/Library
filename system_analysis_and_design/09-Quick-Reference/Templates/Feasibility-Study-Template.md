@@ -86,7 +86,7 @@ This template provides a comprehensive framework for conducting feasibility stud
 
 #### Cost Analysis
 
-##### Development Costs
+#### Development Costs
 **Personnel Costs:**
 - [Role 1: Number of people × hours × rate = total]
 - [Role 2: Number of people × hours × rate = total]
@@ -101,7 +101,7 @@ This template provides a comprehensive framework for conducting feasibility stud
 
 **Total Development Cost:** $[amount]
 
-##### Operational Costs (Annual)
+#### Operational Costs (Annual)
 **Maintenance Costs:**
 - [Item 1: Description and annual cost]
 - [Item 2: Description and annual cost]
@@ -118,7 +118,7 @@ This template provides a comprehensive framework for conducting feasibility stud
 
 #### Benefit Analysis
 
-##### Tangible Benefits
+#### Tangible Benefits
 **Cost Savings:**
 - [Benefit 1: Description and annual value]
 - [Benefit 2: Description and annual value]
@@ -129,14 +129,14 @@ This template provides a comprehensive framework for conducting feasibility stud
 
 **Total Tangible Benefits:** $[amount annually]
 
-##### Intangible Benefits
+#### Intangible Benefits
 - [Benefit 1: Description and qualitative value]
 - [Benefit 2: Description and qualitative value]
 - [Benefit 3: Description and qualitative value]
 
 #### Financial Metrics
 
-##### Return on Investment (ROI)
+#### Return on Investment (ROI)
 **Formula:** ROI = (Total Benefits - Total Costs) / Total Costs × 100%
 
 **Development Costs:** $[amount]
@@ -145,12 +145,12 @@ This template provides a comprehensive framework for conducting feasibility stud
 **Payback Period:** [X months/years]
 **ROI:** [X%]
 
-##### Net Present Value (NPV)
+#### Net Present Value (NPV)
 **Discount Rate:** [X%]
 **Project Timeline:** [X years]
 **NPV Calculation:** $[amount]
 
-##### Break-Even Analysis
+#### Break-Even Analysis
 **Fixed Costs:** $[amount]
 **Variable Costs per Unit:** $[amount]
 **Selling Price per Unit:** $[amount]

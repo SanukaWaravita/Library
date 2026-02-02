@@ -44,27 +44,60 @@ flowchart LR
 🔄 **From** "Follow the contract" ➡️ **To** "Collaborate for success"  
 🔄 **From** "Stick to the plan" ➡️ **To** "Adapt to reality"
 
-## Agile Frameworks
+## Agile Frameworks Comparison
 
-### Scrum
-- **Roles:** Product Owner, Scrum Master, Development Team
-- **Ceremonies:** Sprint Planning, Daily Scrum, Sprint Review, Sprint Retrospective
-- **Artifacts:** Product Backlog, Sprint Backlog, Increment
-- **Time-boxed iterations** called Sprints (2-4 weeks)
+| Framework | Best For | Key Strength | Team Size | Iteration Length |
+|-----------|----------|--------------|-----------|------------------|
+| **Scrum** | Cross-functional teams | Structured ceremonies | 5-9 people | 2-4 weeks |
+| **Kanban** | Support/maintenance teams | Visual workflow | Any size | Continuous |
+| **XP** | Software development | Technical practices | 2-10 people | 1-2 weeks |
+| **SAFe** | Large enterprises | Scaling coordination | 50+ people | 8-12 weeks |
+| **Crystal** | Small, co-located teams | Simplicity | 2-8 people | Flexible |
 
-### Kanban
-- **Visual workflow management**
-- **Work in Progress (WIP) limits**
-- **Pull system** rather than push
-- **Continuous flow** without fixed iterations
-- **Focus on bottleneck reduction**
+### Scrum Deep Dive 🏉
 
-### Extreme Programming (XP)
-- **Pair programming**
-- **Test-driven development (TDD)**
-- **Continuous integration**
-- **Refactoring**
-- **Simple design principles**
+**The Scrum Framework in Action:**
+
+```mermaid
+flowchart TD
+    A[Product Backlog] --> B[Sprint Planning]
+    B --> C[Sprint Backlog]
+    C --> D[Daily Scrum]
+    D --> E[Sprint Development]
+    E --> D
+    E --> F[Sprint Review]
+    F --> G[Sprint Retrospective]
+    G --> H[Product Increment]
+    H --> A
+    
+    style A fill:#e3f2fd
+    style C fill:#f3e5f5
+    style H fill:#e8f5e8
+```
+
+**Scrum Roles & Responsibilities:**
+
+| Role | Primary Responsibility | Key Activities |
+|------|----------------------|----------------|
+| **Product Owner** | Maximize product value | Backlog management, stakeholder communication, acceptance criteria |
+| **Scrum Master** | Facilitate Scrum process | Remove impediments, coach team, protect team from distractions |
+| **Development Team** | Deliver working software | Design, code, test, collaborate, self-organize |
+
+### Kanban Workflow Management 📋
+
+**Sample Kanban Board for Support Team:**
+
+| Backlog | In Progress | Code Review | Testing | Done |
+|---------|-------------|-------------|---------|------|
+| Bug #1234 | Feature ABC | Bug #5678 | Feature XYZ | Bug #9999 |
+| Feature DEF | (WIP: 3/3) | (WIP: 2/2) | (WIP: 1/2) | Feature GHI |
+| Enhancement | | | | Bug #1111 |
+
+**WIP Limits Benefits:**
+- Forces focus on completion
+- Identifies bottlenecks quickly
+- Improves flow efficiency
+- Reduces context switching
 
 ## Development Process
 

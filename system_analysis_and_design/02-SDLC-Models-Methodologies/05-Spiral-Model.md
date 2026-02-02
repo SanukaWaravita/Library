@@ -1,23 +1,78 @@
-# 05 - Spiral Model
+# Spiral Model (Risk-Driven Development)
+
+**Tags:** #SDLC #SpiralModel #RiskManagement #Iterative #Prototyping #RiskDriven
+**Last Reviewed:** February 2, 2026
+
+---
 
 ## Overview
 
-The Spiral Model combines elements of iterative development with systematic risk management. It emphasizes risk assessment and reduction through multiple iterations, making it suitable for large, complex projects where risk management is critical.
+The **Spiral Model** combines elements of iterative development with systematic risk management. It emphasizes risk assessment and reduction through multiple iterations, making it ideal for large, complex projects where risk management is critical.
 
-## Core Principles
+**Key Innovation:** *First SDLC model to make risk management the central organizing principle*
 
-### Risk-Driven Approach
-- Risk identification and analysis
-- Risk mitigation strategies
-- Iterative risk reduction
-- Prototyping for risk assessment
+```mermaid
+flowchart TD
+    subgraph "Spiral Quadrants (Repeated Each Cycle)"
+        A["① DETERMINE OBJECTIVES<br/>🎯 Define requirements<br/>📊 Set constraints<br/>📈 Identify alternatives"] --> B["② RISK ANALYSIS<br/>⚠️ Identify risks<br/>🔍 Analyze risks<br/>🚀 Create prototypes"]
+        B --> C["③ DEVELOPMENT & TEST<br/>🔧 Build increment<br/>✅ Verify solution<br/>📝 Document results"]
+        C --> D["④ PLAN NEXT ITERATION<br/>📋 Review progress<br/>🔄 Plan next cycle<br/>📅 Stakeholder approval"]
+        D -.->|"Next Spiral"| A
+    end
+    
+    E[Project Start] --> A
+    D --> F[Release Decision]
+    
+    style A fill:#e3f2fd
+    style B fill:#ffebee
+    style C fill:#e8f5e8
+    style D fill:#fff3e0
+```
 
-### Four Quadrants
-Each cycle consists of four phases:
-1. **Determine Objectives** - Define requirements and constraints
-2. **Risk Analysis** - Identify and resolve risks
-3. **Development & Testing** - Develop and validate increment
-4. **Planning** - Plan next iteration
+## Core Principles & Risk-Driven Philosophy
+
+### The Risk-First Approach
+
+| Principle | Description | How It Works | Benefit |
+|-----------|-------------|-------------|----------|
+| **Risk-Driven** | Highest-risk elements addressed first | Each cycle tackles biggest risks | Early problem identification |
+| **Incremental** | System built in increments | Working software each cycle | Continuous stakeholder feedback |
+| **Prototype-Heavy** | Prototypes resolve uncertainties | Risk reduction through experimentation | Validated solutions |
+| **Stakeholder Involvement** | Customer participation each cycle | Regular reviews and approvals | Aligned expectations |
+
+### Four-Quadrant Cycle Structure
+
+#### Quadrant I: Determine Objectives 🎯
+**Primary Activities:**
+- Define requirements and constraints for this cycle
+- Identify alternative solutions
+- Set success criteria and acceptance conditions
+
+**Key Deliverables:** Requirements document, constraints list, success criteria
+
+#### Quadrant II: Risk Analysis ⚠️
+**Primary Activities:**
+- Identify potential risks and uncertainties
+- Assess risk probability and impact
+- Develop risk mitigation strategies through prototyping
+
+**Key Deliverables:** Risk analysis report, prototypes, risk mitigation plan
+
+#### Quadrant III: Development & Testing 🔧
+**Primary Activities:**
+- Develop the planned increment
+- Conduct integration and testing
+- Validate solutions against requirements
+
+**Key Deliverables:** Working software increment, test results, documentation
+
+#### Quadrant IV: Plan Next Iteration 📋
+**Primary Activities:**
+- Review cycle results with stakeholders
+- Plan objectives for next spiral
+- Decide whether to continue, modify, or terminate
+
+**Key Deliverables:** Cycle review report, next iteration plan, go/no-go decision
 
 ## Spiral Structure
 

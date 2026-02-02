@@ -47,37 +47,102 @@ flowchart TD
 | Activity Type | Techniques | When to Use | Pros & Cons |
 |---------------|------------|-------------|-------------|
 | **Direct Communication** | Interviews, questionnaires, surveys | Clear stakeholders identified | ✅ Deep insights ❌ Time-intensive |
-| **Group Techniques** | Workshops, focus groups, brainstorming | Multiple stakeholders, consensus needed | ✅ Collaborative ❌ Groupthink risk |
-| **Observational** | Job shadowing, ethnography | Complex workflows, tacit knowledge | ✅ Real context ❌ Observer bias |
-| **Analytical** | Document analysis, system study | Existing systems, regulations | ✅ Comprehensive ❌ May miss innovation |
-| **Creative** | Prototyping, scenarios, storyboards | Unclear requirements, innovation | ✅ Visual clarity ❌ Resource intensive |
-- Requirements specification document
-- Use case specifications
-- Requirements traceability matrix
-- Requirements validation reports
+### 2. Requirements Analysis & Specification 🔍
 
-### 3. Requirements Validation
-**Activities:**
-- Requirement review and inspection
-- Prototyping and simulation
-- User acceptance testing preparation
-- Requirements baseline establishment
+**Primary Goal:** *"Transform raw requirements into structured, actionable specifications"*
 
-**Techniques:**
-- Requirements reviews
-- Prototyping and mockups
-- Model validation
-- Acceptance criteria definition
+| Activity | Techniques | Deliverables | Quality Criteria |
+|----------|-----------|-------------|------------------|
+| **Classification** | Functional vs Non-Functional, priority assignment | Categorized requirements matrix | Complete coverage, clear categories |
+| **Prioritization** | MoSCoW, Kano model, cost-benefit analysis | Prioritized backlog | Stakeholder agreement, business value focus |
+| **Conflict Resolution** | Negotiation, trade-off analysis, stakeholder workshops | Resolved requirements list | No contradictions, feasible scope |
+| **Specification Writing** | Structured templates, acceptance criteria | Requirements specification document | Testable, unambiguous, complete |
 
-### 4. Requirements Management
-**Activities:**
-- Requirement change control
-- Version control and configuration management
-- Traceability maintenance
-- Impact analysis for changes
+### 3. Requirements Validation & Verification ✅
 
-**Deliverables:**
-- Requirements change log
+**Validation:** "Are we specifying the right requirements?"  
+**Verification:** "Are the requirements specified correctly?"
+
+| Validation Techniques | When to Use | Effectiveness | Resource Impact |
+|----------------------|-------------|---------------|------------------|
+| **Requirements Reviews** | All projects | High | Low |
+| **Prototyping** | UI-heavy, unclear concepts | Very High | Medium-High |
+| **User Story Walkthroughs** | Agile projects | High | Low-Medium |
+| **Acceptance Test Creation** | All projects | High | Medium |
+| **Model Validation** | Complex systems | Medium-High | High |
+
+### 4. Requirements Management 🔄
+
+**Lifecycle Activities:**
+
+```mermaid
+flowchart TD
+    A[Initial Requirements] --> B[Change Request]
+    B --> C[Impact Analysis]
+    C --> D{Approve?}
+    D -->|Yes| E[Update Requirements]
+    D -->|No| F[Reject with Rationale]
+    E --> G[Update Traceability]
+    G --> H[Communicate Changes]
+    H --> A
+    F --> A
+    
+    style C fill:#fff3e0
+    style D fill:#ffebee
+    style E fill:#e8f5e8
+    style G fill:#e3f2fd
+```
+
+## Real-World Case Study: Hospital Management System
+
+### Project Context
+**Challenge:** Regional hospital needs integrated patient management system  
+**Stakeholders:** Doctors, nurses, patients, administrators, IT staff, insurance companies  
+**Timeline:** 18 months | **Budget:** $2.5M | **Compliance:** HIPAA, state regulations
+
+### Requirements Elicitation Journey
+
+#### Phase 1: Stakeholder Analysis (Month 1)
+
+| Stakeholder Group | Primary Interests | Influence Level | Engagement Strategy |
+|-------------------|-------------------|-----------------|--------------------|
+| **Doctors** | Efficient patient data access, mobile compatibility | High | Individual interviews, workflow shadowing |
+| **Nurses** | Easy data entry, medication tracking | High | Focus groups, current system analysis |
+| **Patients** | Privacy, appointment scheduling, portal access | Medium | Surveys, patient advisory board |
+| **Administration** | Cost control, reporting, compliance | High | Executive workshops, regulatory review |
+| **Insurance** | Claims processing, data exchange | Medium | Industry standards review |
+
+#### Phase 2: Requirements Discovery (Months 2-4)
+
+**Technique Mix Used:**
+
+| Week | Primary Technique | Focus Area | Key Discoveries |
+|------|------------------|-----------|------------------|
+| **Week 1-2** | Workflow Observation | Emergency dept, patient admissions | Current process takes 45 min, 12 forms |
+| **Week 3-4** | Doctor Interviews | Patient history access, diagnostic tools | Need 3-second response time, integration with lab systems |
+| **Week 5-6** | Nurse Focus Groups | Medication administration, shift changes | Barcode scanning essential, mobile cart compatibility |
+| **Week 7-8** | Patient Surveys | Portal preferences, communication needs | 78% want online appointment scheduling |
+| **Week 9-10** | Admin Workshops | Reporting requirements, compliance | 47 different reports needed, real-time dashboard |
+| **Week 11-12** | Technical Assessment | Integration points, data migration | Legacy system has 15 years of data, 23 external interfaces |
+
+### Requirements Analysis Results
+
+**Requirements Breakdown:**
+
+| Category | Count | Priority Distribution | Complexity Assessment |
+|----------|-------|---------------------|----------------------|
+| **Functional** | 247 | Must: 89, Should: 96, Could: 62 | High: 34, Medium: 156, Low: 57 |
+| **Non-Functional** | 73 | Must: 41, Should: 25, Could: 7 | High: 23, Medium: 31, Low: 19 |
+| **Interface** | 45 | Must: 28, Should: 12, Could: 5 | High: 18, Medium: 19, Low: 8 |
+| **Data** | 89 | Must: 67, Should: 18, Could: 4 | High: 29, Medium: 41, Low: 19 |
+
+### Sample Requirements with Quality Assessment
+
+| Requirement ID | Description | Quality Issues | Improved Version |
+|----------------|-------------|----------------|------------------|
+| **REQ-001** | "System should be fast" | Vague, not testable | "System shall respond to patient lookup queries within 3 seconds for 95% of requests" |
+| **REQ-045** | "Doctors need patient info" | Incomplete scope | "System shall display patient medical history, current medications, and allergies within 2 clicks from patient selection" |
+| **REQ-078** | "Must be HIPAA compliant" | Too broad | "System shall implement role-based access controls, audit trails, and data encryption per HIPAA Security Rule requirements" |
 - Updated requirements documents
 - Impact analysis reports
 - Requirements status reports
@@ -227,3 +292,10 @@ flowchart TD
 ---
 
 **Key Takeaway:** Effective requirements engineering requires systematic processes, clear communication, and quality assurance to ensure the final system meets stakeholder needs and business objectives.
+
+## Related Concepts
+
+- **Previous:** [Project Scoping & MoSCoW](../../03-Project-Initiation-Planning/03-Project-Scoping-MoSCoW.md)
+- **Next:** [Business Requirements & SMART Criteria](02-Business-Requirements-SMART.md)
+- **See Also:** [Requirements Elicitation Guide](../../09-Quick-Reference/Requirements-Elicitation-Techniques-Guide.md)
+- **Foundation:** [Introduction to SAD](../../Foundations%20and%20Core%20Concepts/1.4%20-%20intro_to_sad.md)

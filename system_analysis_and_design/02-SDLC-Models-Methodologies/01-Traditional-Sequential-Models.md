@@ -144,4 +144,5 @@ flowchart TD
 
 - **Next:** [Waterfall Model Deep Dive](02-Waterfall-Model.md)
 - **Compare:** [Agile Methodology](06-Agile-Methodology.md)
-- **See Also:** [When to Choose Which Model](../../09-Quick-Reference/)
+- **See Also:** [SDLC Models Comparison](../../09-Quick-Reference/SDLC-Models-Comparison-Matrix.md)
+- **Foundation:** [SDLC Overview](../Foundations%20and%20Core%20Concepts/1.6%20-%20SDLC_Overview.md)
