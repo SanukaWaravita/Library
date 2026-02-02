@@ -4,6 +4,7 @@ improvements-by-code-rabbit/
 documents\SAD_Note_Refinement_prompt.md
 system_analysis_and_design\SAD-Refinement-Checklist.md
 
+
 # IDE and Editor files
 .vscode/
 .idea/
@@ -19,3 +20,5 @@ desktop.ini
 # Temporary files
 *.tmp
 *.temp
+system_analysis_and_design/SAD-Refinement-Checklist.md
+documents/SAD_Note_Refinement_prompt.md
