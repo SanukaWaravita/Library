@@ -18,6 +18,8 @@ import java.util.Scanner;
     }
 ```
 
+- Output: 
+
 ```
 Enter a number: 12
 12 is even
@@ -39,6 +41,8 @@ public class VowelConsonant {
         }
     } 
 ```
+
+- Output:
 
 ```
 i is vowel
@@ -62,6 +66,8 @@ public class Largest {
         }
     }
 ```
+
+- Output:
 
 ```
 3.9 is the largest number.
