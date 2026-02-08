@@ -173,7 +173,7 @@ Each phase is intentionally small. You can repeat phases per service.
 
 Goal: Capture "what is this service and what does it depend on" for all services.
 
-1. [ ] Create a **documentation template** with headings:
+1. [x] Create a **documentation template** with headings:
    - Overview & Responsibilities
    - Tech Stack & Dependencies
    - APIs
@@ -183,13 +183,13 @@ Goal: Capture "what is this service and what does it depend on" for all services
    - Cross-Cutting Concerns
    - Configuration & Environment
    - Testing & Quality
-2. [ ] For **patient-service**, fill in only:
+2. [x] For **patient-service**, fill in only:
    - Overview & Responsibilities (2–3 sentences + feature bullets).
    - Tech Stack & Dependencies (Java/Spring versions, DBs, Kafka, gRPC, key libraries).
-3. [ ] For **auth-service**, fill in only Overview & Tech Stack & Dependencies.
-4. [ ] For **billing-service**, fill in only Overview & Tech Stack & Dependencies.
-5. [ ] For **analytics-service**, fill in only Overview & Tech Stack & Dependencies.
-6. [ ] For **api-gateway**, fill in only Overview & Tech Stack & Dependencies.
+3. [x] For **auth-service**, fill in only Overview & Tech Stack & Dependencies.
+4. [x] For **billing-service**, fill in only Overview & Tech Stack & Dependencies.
+5. [x] For **analytics-service**, fill in only Overview & Tech Stack & Dependencies.
+6. [x] For **api-gateway**, fill in only Overview & Tech Stack & Dependencies.
 
 You can consider Phase 1 done once every service has a short **Overview** and **Tech Stack & Dependencies** section.
 
