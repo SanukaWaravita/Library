@@ -41,7 +41,31 @@ _TODO: List login/registration DTOs and describe authentication flows._
 
 ## Business Logic & Architectural Patterns
 
-_TODO: Summarize auth-related services, token lifecycle rules, and role/authority handling._
+### Package Structure
+
+- `config` – Spring Security configuration (security filter chain, password encoding, CORS, etc.).
+- `controller` – REST controllers exposing authentication and authorization endpoints.
+- `service` – Services implementing user management, authentication, and token handling.
+- `repository` – Spring Data JPA repositories for users, roles, and related entities.
+- `model` – JPA entities representing users, roles/authorities, and other auth-domain objects.
+- `dto` – Data Transfer Objects for login, registration, token responses, and user views.
+- `util` – Utility classes (e.g., JWT helpers, token utilities).
+- `AuthServiceApplication` – Spring Boot application entry point.
+
+### High-Level Security & Request Flow
+
+1. A client sends an authentication request (e.g., login or registration) to an auth-service endpoint (often via the API gateway).
+2. The controller validates the incoming DTO and delegates to a service.
+3. The service loads or creates user entities via repositories and applies security rules (password hashing, role assignment, etc.).
+4. For login, the service authenticates credentials and, on success, issues a JWT using the JWT utilities.
+5. The controller returns a response DTO containing the token and any user/role information needed by the client.
+6. For protected resources, API gateway or downstream services validate incoming JWTs using the same signing key and token parsing utilities.
+
+### Patterns Used
+
+- Standard layered architecture: **controller → service → repository → database**.
+- Centralized security configuration in the `config` package.
+- JWT-based stateless authentication with Spring Security.
 
 ## Cross-Cutting Concerns
 

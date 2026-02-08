@@ -199,13 +199,13 @@ You can consider Phase 1 done once every service has a short **Overview** and **
 
 Goal: Capture how code is organized and the main flows, without documenting every method.
 
-1. [ ] For **patient-service**:
-   - [ ] Document the package structure (controller, service, repository, dto, model, kafka, grpc, mapper, exception).
-   - [ ] Describe the high-level request flow (HTTP request → controller → service → repository → response).
-   - [ ] Note any patterns used (e.g., dedicated mapper layer).
-2. [ ] For **auth-service**:
-   - [ ] Document package structure (config, controller, service, repository, model, dto, util).
-   - [ ] Describe the high-level security flow (how requests are authenticated and authorized).
+1. [x] For **patient-service**:
+   - [x] Document the package structure (controller, service, repository, dto, model, kafka, grpc, mapper, exception).
+   - [x] Describe the high-level request flow (HTTP request → controller → service → repository → response).
+   - [x] Note any patterns used (e.g., dedicated mapper layer).
+2. [x] For **auth-service**:
+   - [x] Document package structure (config, controller, service, repository, model, dto, util).
+   - [x] Describe the high-level security flow (how requests are authenticated and authorized).
 3. [ ] For **billing-service**:
    - [ ] Document gRPC-related packages and whether it acts as server, client, or both.
    - [ ] Summarize how billing logic is grouped (single service vs multiple components).

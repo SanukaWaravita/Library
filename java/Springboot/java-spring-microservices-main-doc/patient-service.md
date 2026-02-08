@@ -42,7 +42,33 @@ _TODO: List DTOs, mapping strategies, and typical data flows._
 
 ## Business Logic & Architectural Patterns
 
-_TODO: Summarize service-layer classes, core rules, and patterns used._
+### Package Structure
+
+- `controller` – REST controllers exposing patient-related endpoints.
+- `service` – Service-layer classes implementing patient business logic.
+- `repository` – Spring Data JPA repositories for persistence.
+- `model` – JPA entities representing patient-domain data.
+- `dto` – Data Transfer Objects used for requests, responses, and events.
+- `mapper` – Classes responsible for mapping between entities and DTOs.
+- `kafka` – Kafka producers/consumers for patient-related events.
+- `grpc` – gRPC clients/servers and related integration classes.
+- `exception` – Custom exceptions and global error-handling support.
+- `PatientServiceApplication` – Spring Boot application entry point.
+
+### High-Level Request Flow
+
+1. A client sends an HTTP request (via the API gateway) to a patient-service REST endpoint.
+2. The corresponding controller method validates input and delegates to the service layer.
+3. The service layer applies business rules and interacts with repositories to read/write data.
+4. Entities are mapped to/from DTOs using the mapper components.
+5. The controller returns a response DTO, which is serialized as JSON back to the client.
+6. As part of certain operations, the service may publish or consume Kafka events and/or call gRPC endpoints.
+
+### Patterns Used
+
+- Standard layered architecture: **controller → service → repository → database**.
+- Dedicated mapper layer separating domain models from external DTO representations.
+- Integration endpoints via Kafka (event-driven interactions) and gRPC (service-to-service calls).
 
 ## Cross-Cutting Concerns
 
