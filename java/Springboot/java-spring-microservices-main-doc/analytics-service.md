@@ -37,7 +37,38 @@ _TODO: List DTOs/protobuf messages and describe ingestion/processing/output flow
 
 ## Business Logic & Architectural Patterns
 
-_TODO: Summarize processing pipelines and key analytics rules._
+### Package Structure
+
+- `kafka` – Kafka consumer classes for ingesting events from other services.
+- `AnalyticsServiceApplication` – Spring Boot application entry point.
+
+### Kafka Consumer Organization
+
+**analytics-service acts as a Kafka consumer** that processes patient-related events.
+
+- `KafkaConsumer` class uses `@KafkaListener` to subscribe to Kafka topics.
+- Currently consumes from the `patient` topic with consumer group `analytics-service`.
+- Deserializes protobuf-encoded `PatientEvent` messages.
+- Processes events asynchronously as they arrive from Kafka.
+
+### Analytics Results Destination
+
+**Current implementation**: Analytics results are logged to the application logs.
+
+- Each consumed patient event is logged with key details (patientId, name, email).
+- Error handling logs deserialization failures.
+
+**Future enhancements** could include:
+- Storing aggregated metrics in a database (e.g., time-series DB, analytics warehouse).
+- Publishing derived events back to Kafka for downstream consumers.
+- Exposing REST endpoints to query analytics results.
+- Integration with monitoring/metrics systems (Prometheus, Grafana).
+
+### Patterns Used
+
+- Event-driven architecture (consumes domain events via Kafka).
+- Protobuf for message serialization (shared schemas with patient-service).
+- Simple listener-based processing (single consumer class).
 
 ## Cross-Cutting Concerns
 

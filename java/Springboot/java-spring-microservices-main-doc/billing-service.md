@@ -37,7 +37,34 @@ _TODO: List DTOs/protobuf messages and describe request/response flows._
 
 ## Business Logic & Architectural Patterns
 
-_TODO: Summarize billing-related services and key business rules._
+### Package Structure
+
+- `grpc` – gRPC service implementation for billing operations.
+- `BillingServiceApplication` – Spring Boot application entry point.
+
+### gRPC Service Role
+
+**billing-service acts as a gRPC server** that exposes billing-related operations to other microservices.
+
+- Implements `BillingServiceImplBase` (generated from `billing_service.proto`).
+- Uses `@GrpcService` annotation from `grpc-spring-boot-starter` for automatic registration.
+- Currently exposes the following gRPC method:
+  - `createBillingAccount(BillingRequest) → BillingResponse` – Creates a billing account for a patient.
+
+### Billing Logic Organization
+
+- **Single gRPC service class**: `BillingGrpcService` handles all billing operations.
+- Business logic is currently placeholder-based (hardcoded responses).
+- Real implementation would include:
+  - Database persistence for billing accounts.
+  - Complex billing calculations and fee structures.
+  - Integration with payment gateways or external billing systems.
+
+### Patterns Used
+
+- gRPC-based service-to-service communication (synchronous RPC).
+- Protobuf for strongly-typed message contracts.
+- Simple service architecture (no layered structure yet due to minimal business logic).
 
 ## Cross-Cutting Concerns
 
