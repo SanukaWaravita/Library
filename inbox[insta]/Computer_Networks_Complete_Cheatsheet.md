@@ -35,5 +35,15 @@ Network = Devices + Medium + Protocols
 - 🌍 **WAN:** Wide Area Networ (World)
 - 📱 **PAN:** Personal Area Network (Bluetooth)
 
-![Types of Networks](TypesOfNetworks.png)
+![Types of Networks](TypesOfNetworks.jpg)
 
+## Real Work Example
+
+![Real Work Example](RealWorkExample.png)
+
+- Employees on -**LAN**
+- Router to Internet
+- **Firewall** for **Security**
+
+
+# NETWORK TOPOLOGY & TRANSMISSION MODES
