@@ -6,3 +6,34 @@
 
 ![Computer Network Representation](whatIsAComputerNetwork.jpg)
 
+- Simple Definition:
+
+```
+Network = Devices + Medium + Protocols
+      └─► Wires/ Wifi ─► *Rules* (Protocols)
+```
+
+##  Why Networks Are Important?
+
+✅ Data Sharing
+
+![Data Sharing](DataSharing.jpg)
+
+✅ Internet Access
+✅ Resource Sharing (Printer, Files)
+✅ Communication (Email, Chat)
+✅ *Cloud Services*
+
+## Components of Data Communication
+
+![Components of Data Communication](ComponentsOfDataCommunication.jpg)
+
+## Types of Networks
+
+- 🏠 **LAN:** Local Area (Office)
+- 🏢 **MAN:** Metropolitan Area (City)
+- 🌍 **WAN:** Wide Area Networ (World)
+- 📱 **PAN:** Personal Area Network (Bluetooth)
+
+![Types of Networks](TypesOfNetworks.png)
+
