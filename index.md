@@ -4,6 +4,16 @@ A comprehensive index of all notes and materials in this library.
 
 ---
 
+## � Documents
+
+### Frontend Development
+- [Frontend Design Specification](documents/frontend-design-specification.md) - Complete design system and guidelines for HTML interface
+
+### Improvements & Features
+- [[feat] [frontend] html frontend page for pleasing visual](documents/improvements-by-code-rabbit/%5Bfeat%5D%20%5Bfrontend%5D%20html%20frontend%20page%20for%20pleasing%20visual.md) - Frontend enhancement suggestions
+
+---
+
 ## 💻 JavaScript
 
 ### Core Concepts
@@ -40,10 +50,25 @@ A comprehensive index of all notes and materials in this library.
 
 ## 🏢 System Analysis and Design
 
+### Foundations and Core Concepts
+- [Introduction to SAD](system_analysis_and_design/Foundations%20and%20Core%20Concepts/intro_to_sad.md) - Introduction to System Analysis and Design
+- [SDLC Overview](system_analysis_and_design/Foundations%20and%20Core%20Concepts/SDLC_Overview.md) - Software Development Life Cycle overview
+- [As-Is Vs To-Be Analysis](system_analysis_and_design/Foundations%20and%20Core%20Concepts/As-Is_Vs_To-Be_Analysis.md) - Analysis methodologies
+
 ### Introduction to Systems
-- [1.1 - What is a System](system_analysis_and_design/intro_to_systems/1.1%20-%20What_is_a_Sytem.md)
-- [1.2 - System Types & Classification](system_analysis_and_design/intro_to_systems/1.2%20-%20System_Types_&_Classification.md)
-- [1.3 - General System Model (Deep Dive)](system_analysis_and_design/intro_to_systems/1.3%20-%20General%20System%20Model%20(Deep%20Dive).md)
+- [1.1 - What is a System](system_analysis_and_design/Foundations%20and%20Core%20Concepts/intro_to_systems/1.1%20-%20What_is_a_Sytem.md)
+- [1.2 - System Types & Classification](system_analysis_and_design/Foundations%20and%20Core%20Concepts/intro_to_systems/1.2%20-%20System_Types_&_Classification.md)
+- [1.3 - General System Model (Deep Dive)](system_analysis_and_design/Foundations%20and%20Core%20Concepts/intro_to_systems/1.3%20-%20General%20System%20Model%20(Deep%20Dive).md)
+
+---
+
+## 🎨 Frontend Interface
+
+### HTML Pages
+- [Landing Page](index.html) - Main library homepage
+
+### Stylesheets
+- [Main Styles](styles/main.css) - Complete CSS styling for the frontend
 
 ---
 
