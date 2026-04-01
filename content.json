@@ -1,0 +1,679 @@
+{
+  "categories": [
+    {
+      "name": "JavaScript",
+      "path": "javascript",
+      "icon": "js",
+      "fileCount": 19,
+      "children": [
+        {
+          "name": "Notes",
+          "path": "javascript/Notes",
+          "type": "folder",
+          "children": [
+            {
+              "name": "Arithmetic Operators",
+              "path": "javascript/Notes/Arithmetic_Operators.md",
+              "type": "file"
+            },
+            {
+              "name": "Array Functions",
+              "path": "javascript/Notes/Array_Functions.md",
+              "type": "file"
+            },
+            {
+              "name": "Basic Setup",
+              "path": "javascript/Notes/Basic_Setup.md",
+              "type": "file"
+            },
+            {
+              "name": "Checked Property",
+              "path": "javascript/Notes/Checked_Property.md",
+              "type": "file"
+            },
+            {
+              "name": "Constants",
+              "path": "javascript/Notes/Constants.md",
+              "type": "file"
+            },
+            {
+              "name": "Datatypes",
+              "path": "javascript/Notes/Datatypes.md",
+              "type": "file"
+            },
+            {
+              "name": "If Statements",
+              "path": "javascript/Notes/If_Statements.md",
+              "type": "file"
+            },
+            {
+              "name": "Javascript Notes",
+              "path": "javascript/Notes/javascript_notes.md",
+              "type": "file"
+            },
+            {
+              "name": "Logical Operators",
+              "path": "javascript/Notes/Logical_Operators.md",
+              "type": "file"
+            },
+            {
+              "name": "Math Objects",
+              "path": "javascript/Notes/Math_Objects.md",
+              "type": "file"
+            },
+            {
+              "name": "Strict Equality",
+              "path": "javascript/Notes/Strict_Equality.md",
+              "type": "file"
+            },
+            {
+              "name": "String Methods",
+              "path": "javascript/Notes/String_Methods.md",
+              "type": "file"
+            },
+            {
+              "name": "Switches",
+              "path": "javascript/Notes/Switches.md",
+              "type": "file"
+            },
+            {
+              "name": "Ternary Operator",
+              "path": "javascript/Notes/Ternary_Operator.md",
+              "type": "file"
+            },
+            {
+              "name": "Type Conversion",
+              "path": "javascript/Notes/Type_Conversion.md",
+              "type": "file"
+            },
+            {
+              "name": "User Input",
+              "path": "javascript/Notes/User_Input.md",
+              "type": "file"
+            },
+            {
+              "name": "Variables",
+              "path": "javascript/Notes/Variables.md",
+              "type": "file"
+            },
+            {
+              "name": "While Loops",
+              "path": "javascript/Notes/While_Loops.md",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "Node.Js Backend",
+          "path": "javascript/Node.js_backend.md",
+          "type": "file"
+        }
+      ]
+    },
+    {
+      "name": "Java",
+      "path": "java",
+      "icon": "java",
+      "fileCount": 11,
+      "children": [
+        {
+          "name": "Notes",
+          "path": "java/Notes",
+          "type": "folder",
+          "children": [
+            {
+              "name": "Accepting User Input",
+              "path": "java/Notes/accepting_user_input.md",
+              "type": "file"
+            },
+            {
+              "name": "Basic Programs",
+              "path": "java/Notes/Basic_programs.md",
+              "type": "file"
+            },
+            {
+              "name": "Class",
+              "path": "java/Notes/Class.md",
+              "type": "file"
+            },
+            {
+              "name": "Comments",
+              "path": "java/Notes/comments.md",
+              "type": "file"
+            },
+            {
+              "name": "Control Statements",
+              "path": "java/Notes/Control_Statements.md",
+              "type": "file"
+            },
+            {
+              "name": "Escape Sequences",
+              "path": "java/Notes/escape_sequences.md",
+              "type": "file"
+            },
+            {
+              "name": "Iterative Programs",
+              "path": "java/Notes/Iterative_Programs.md",
+              "type": "file"
+            },
+            {
+              "name": "Operators",
+              "path": "java/Notes/Operators.md",
+              "type": "file"
+            },
+            {
+              "name": "Outputting Text",
+              "path": "java/Notes/Outputting_Text.md",
+              "type": "file"
+            },
+            {
+              "name": "Variables",
+              "path": "java/Notes/variables.md",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "Springboot",
+          "path": "java/Springboot",
+          "type": "folder",
+          "children": [
+            {
+              "name": "Spring Boot Backend",
+              "path": "java/Springboot/Spring_Boot_backend.md",
+              "type": "file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "System Analysis & Design",
+      "path": "system_analysis_and_design",
+      "icon": "sad",
+      "fileCount": 72,
+      "children": [
+        {
+          "name": "Foundations And Core Concepts",
+          "path": "system_analysis_and_design/01-Foundations-and-Core-Concepts",
+          "type": "folder",
+          "children": [
+            {
+              "name": "Intro To Systems",
+              "path": "system_analysis_and_design/01-Foundations-and-Core-Concepts/intro_to_systems",
+              "type": "folder",
+              "children": [
+                {
+                  "name": "1.1   What Is A Sytem",
+                  "path": "system_analysis_and_design/01-Foundations-and-Core-Concepts/intro_to_systems/1.1 - What_is_a_Sytem.md",
+                  "type": "file"
+                },
+                {
+                  "name": "1.2   System Types & Classification",
+                  "path": "system_analysis_and_design/01-Foundations-and-Core-Concepts/intro_to_systems/1.2 - System_Types_&_Classification.md",
+                  "type": "file"
+                },
+                {
+                  "name": "1.3   General System Model (Deep Dive)",
+                  "path": "system_analysis_and_design/01-Foundations-and-Core-Concepts/intro_to_systems/1.3 - General System Model (Deep Dive).md",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "1.10   User Stories & Atomic Requirements",
+              "path": "system_analysis_and_design/01-Foundations-and-Core-Concepts/1.10 - User Stories & Atomic Requirements.md",
+              "type": "file"
+            },
+            {
+              "name": "1.11   Types Of Requirements",
+              "path": "system_analysis_and_design/01-Foundations-and-Core-Concepts/1.11 - Types_of_Requirements.md",
+              "type": "file"
+            },
+            {
+              "name": "1.4   Intro To Sad",
+              "path": "system_analysis_and_design/01-Foundations-and-Core-Concepts/1.4 - intro_to_sad.md",
+              "type": "file"
+            },
+            {
+              "name": "1.5   The Systems Analyst Role",
+              "path": "system_analysis_and_design/01-Foundations-and-Core-Concepts/1.5 - The_Systems_Analyst_Role.md",
+              "type": "file"
+            },
+            {
+              "name": "1.6   SDLC Overview",
+              "path": "system_analysis_and_design/01-Foundations-and-Core-Concepts/1.6 - SDLC_Overview.md",
+              "type": "file"
+            },
+            {
+              "name": "1.7   As Is Vs To Be Analysis",
+              "path": "system_analysis_and_design/01-Foundations-and-Core-Concepts/1.7 - As-Is_Vs_To-Be_Analysis.md",
+              "type": "file"
+            },
+            {
+              "name": "1.8   MoSCoW Priority Method",
+              "path": "system_analysis_and_design/01-Foundations-and-Core-Concepts/1.8 - MoSCoW_Priority_Method.md",
+              "type": "file"
+            },
+            {
+              "name": "1.9   SMART Criteria For Requirements",
+              "path": "system_analysis_and_design/01-Foundations-and-Core-Concepts/1.9 - SMART_Criteria_for_Requirements.md",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "SDLC Models Methodologies",
+          "path": "system_analysis_and_design/02-SDLC-Models-Methodologies",
+          "type": "folder",
+          "children": [
+            {
+              "name": "Traditional Sequential Models",
+              "path": "system_analysis_and_design/02-SDLC-Models-Methodologies/01-Traditional-Sequential-Models.md",
+              "type": "file"
+            },
+            {
+              "name": "Waterfall Model",
+              "path": "system_analysis_and_design/02-SDLC-Models-Methodologies/02-Waterfall-Model.md",
+              "type": "file"
+            },
+            {
+              "name": "V Model",
+              "path": "system_analysis_and_design/02-SDLC-Models-Methodologies/03-V-Model.md",
+              "type": "file"
+            },
+            {
+              "name": "Incremental Model",
+              "path": "system_analysis_and_design/02-SDLC-Models-Methodologies/04-Incremental-Model.md",
+              "type": "file"
+            },
+            {
+              "name": "Spiral Model",
+              "path": "system_analysis_and_design/02-SDLC-Models-Methodologies/05-Spiral-Model.md",
+              "type": "file"
+            },
+            {
+              "name": "Agile Methodology",
+              "path": "system_analysis_and_design/02-SDLC-Models-Methodologies/06-Agile-Methodology.md",
+              "type": "file"
+            },
+            {
+              "name": "Scrum Kanban Overview",
+              "path": "system_analysis_and_design/02-SDLC-Models-Methodologies/07-Scrum-Kanban-Overview.md",
+              "type": "file"
+            },
+            {
+              "name": "Industry Trends DevOps UCD",
+              "path": "system_analysis_and_design/02-SDLC-Models-Methodologies/08-Industry-Trends-DevOps-UCD.md",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "Project Initiation Planning",
+          "path": "system_analysis_and_design/03-Project-Initiation-Planning",
+          "type": "folder",
+          "children": [
+            {
+              "name": "Feasibility Study",
+              "path": "system_analysis_and_design/03-Project-Initiation-Planning/01-Feasibility-Study.md",
+              "type": "file"
+            },
+            {
+              "name": "Cost Benefit ROI",
+              "path": "system_analysis_and_design/03-Project-Initiation-Planning/02-Cost-Benefit-ROI.md",
+              "type": "file"
+            },
+            {
+              "name": "Project Scoping MoSCoW",
+              "path": "system_analysis_and_design/03-Project-Initiation-Planning/03-Project-Scoping-MoSCoW.md",
+              "type": "file"
+            },
+            {
+              "name": "Work Breakdown Structure",
+              "path": "system_analysis_and_design/03-Project-Initiation-Planning/04-Work-Breakdown-Structure.md",
+              "type": "file"
+            },
+            {
+              "name": "Estimation Techniques",
+              "path": "system_analysis_and_design/03-Project-Initiation-Planning/05-Estimation-Techniques.md",
+              "type": "file"
+            },
+            {
+              "name": "Gantt Charts Scheduling",
+              "path": "system_analysis_and_design/03-Project-Initiation-Planning/06-Gantt-Charts-Scheduling.md",
+              "type": "file"
+            },
+            {
+              "name": "Critical Path Method",
+              "path": "system_analysis_and_design/03-Project-Initiation-Planning/07-Critical-Path-Method.md",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "Requirements Engineering",
+          "path": "system_analysis_and_design/04-Requirements-Engineering",
+          "type": "folder",
+          "children": [
+            {
+              "name": "Requirements Fundamentals",
+              "path": "system_analysis_and_design/04-Requirements-Engineering/01-Requirements-Fundamentals.md",
+              "type": "file"
+            },
+            {
+              "name": "Business Requirements SMART",
+              "path": "system_analysis_and_design/04-Requirements-Engineering/02-Business-Requirements-SMART.md",
+              "type": "file"
+            },
+            {
+              "name": "User Requirements Stories",
+              "path": "system_analysis_and_design/04-Requirements-Engineering/03-User-Requirements-Stories.md",
+              "type": "file"
+            },
+            {
+              "name": "Functional Requirements",
+              "path": "system_analysis_and_design/04-Requirements-Engineering/04-Functional-Requirements.md",
+              "type": "file"
+            },
+            {
+              "name": "Non Functional Requirements",
+              "path": "system_analysis_and_design/04-Requirements-Engineering/05-Non-Functional-Requirements.md",
+              "type": "file"
+            },
+            {
+              "name": "Requirements Validation Verification",
+              "path": "system_analysis_and_design/04-Requirements-Engineering/06-Requirements-Validation-Verification.md",
+              "type": "file"
+            },
+            {
+              "name": "Requirements Management Change Control",
+              "path": "system_analysis_and_design/04-Requirements-Engineering/07-Requirements-Management-Change-Control.md",
+              "type": "file"
+            },
+            {
+              "name": "Use Case Modeling",
+              "path": "system_analysis_and_design/04-Requirements-Engineering/08-Use-Case-Modeling.md",
+              "type": "file"
+            },
+            {
+              "name": "Requirements Documentation Standards",
+              "path": "system_analysis_and_design/04-Requirements-Engineering/09-Requirements-Documentation-Standards.md",
+              "type": "file"
+            },
+            {
+              "name": "Requirements Engineering Best Practices",
+              "path": "system_analysis_and_design/04-Requirements-Engineering/10-Requirements-Engineering-Best-Practices.md",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "Analysis Modeling Techniques",
+          "path": "system_analysis_and_design/05-Analysis-Modeling-Techniques",
+          "type": "folder",
+          "children": [
+            {
+              "name": "Analysis Fundamentals",
+              "path": "system_analysis_and_design/05-Analysis-Modeling-Techniques/01-Analysis-Fundamentals.md",
+              "type": "file"
+            },
+            {
+              "name": "Structured Analysis",
+              "path": "system_analysis_and_design/05-Analysis-Modeling-Techniques/02-Structured-Analysis.md",
+              "type": "file"
+            },
+            {
+              "name": "Object Oriented Analysis",
+              "path": "system_analysis_and_design/05-Analysis-Modeling-Techniques/03-Object-Oriented-Analysis.md",
+              "type": "file"
+            },
+            {
+              "name": "Process Modeling",
+              "path": "system_analysis_and_design/05-Analysis-Modeling-Techniques/04-Process-Modeling.md",
+              "type": "file"
+            },
+            {
+              "name": "Data Modeling",
+              "path": "system_analysis_and_design/05-Analysis-Modeling-Techniques/05-Data-Modeling.md",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "System Design",
+          "path": "system_analysis_and_design/06-System-Design",
+          "type": "folder",
+          "children": [
+            {
+              "name": "System Design Fundamentals",
+              "path": "system_analysis_and_design/06-System-Design/01-System-Design-Fundamentals.md",
+              "type": "file"
+            },
+            {
+              "name": "Software Architecture Patterns",
+              "path": "system_analysis_and_design/06-System-Design/02-Software-Architecture-Patterns.md",
+              "type": "file"
+            },
+            {
+              "name": "Database Design",
+              "path": "system_analysis_and_design/06-System-Design/03-Database-Design.md",
+              "type": "file"
+            },
+            {
+              "name": "User Interface Design",
+              "path": "system_analysis_and_design/06-System-Design/04-User-Interface-Design.md",
+              "type": "file"
+            },
+            {
+              "name": "System Security Design",
+              "path": "system_analysis_and_design/06-System-Design/05-System-Security-Design.md",
+              "type": "file"
+            },
+            {
+              "name": "System Design Quality Assurance",
+              "path": "system_analysis_and_design/06-System-Design/06-System-Design-Quality-Assurance.md",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "Tools Implementation",
+          "path": "system_analysis_and_design/07-Tools-Implementation",
+          "type": "folder",
+          "children": [
+            {
+              "name": "CASE Tools",
+              "path": "system_analysis_and_design/07-Tools-Implementation/01-CASE-Tools.md",
+              "type": "file"
+            },
+            {
+              "name": "Project Management Tools",
+              "path": "system_analysis_and_design/07-Tools-Implementation/02-Project-Management-Tools.md",
+              "type": "file"
+            },
+            {
+              "name": "Deployment Strategies",
+              "path": "system_analysis_and_design/07-Tools-Implementation/03-Deployment-Strategies.md",
+              "type": "file"
+            },
+            {
+              "name": "Change Management Training",
+              "path": "system_analysis_and_design/07-Tools-Implementation/04-Change-Management-Training.md",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "Case Studies Practice",
+          "path": "system_analysis_and_design/08-Case-Studies-Practice",
+          "type": "folder",
+          "children": [
+            {
+              "name": "Online Bookstore Case",
+              "path": "system_analysis_and_design/08-Case-Studies-Practice/01-Online-Bookstore-Case.md",
+              "type": "file"
+            },
+            {
+              "name": "Library System Case",
+              "path": "system_analysis_and_design/08-Case-Studies-Practice/02-Library-System-Case.md",
+              "type": "file"
+            },
+            {
+              "name": "Food Delivery App Case",
+              "path": "system_analysis_and_design/08-Case-Studies-Practice/03-Food-Delivery-App-Case.md",
+              "type": "file"
+            },
+            {
+              "name": "Exercises Solutions",
+              "path": "system_analysis_and_design/08-Case-Studies-Practice/04-Exercises-Solutions.md",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "Quick Reference",
+          "path": "system_analysis_and_design/09-Quick-Reference",
+          "type": "folder",
+          "children": [
+            {
+              "name": "Cheat Sheets",
+              "path": "system_analysis_and_design/09-Quick-Reference/Cheat-Sheets",
+              "type": "folder",
+              "children": [
+                {
+                  "name": "Analyst Skills Checklist",
+                  "path": "system_analysis_and_design/09-Quick-Reference/Cheat-Sheets/Analyst-Skills-Checklist.md",
+                  "type": "file"
+                },
+                {
+                  "name": "Requirements Types Matrix",
+                  "path": "system_analysis_and_design/09-Quick-Reference/Cheat-Sheets/Requirements-Types-Matrix.md",
+                  "type": "file"
+                },
+                {
+                  "name": "SDLC Models Comparison",
+                  "path": "system_analysis_and_design/09-Quick-Reference/Cheat-Sheets/SDLC-Models-Comparison.md",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "Exam Notes",
+              "path": "system_analysis_and_design/09-Quick-Reference/Exam-Notes",
+              "type": "folder",
+              "children": [
+                {
+                  "name": "Common Questions",
+                  "path": "system_analysis_and_design/09-Quick-Reference/Exam-Notes/Common-Questions.md",
+                  "type": "file"
+                },
+                {
+                  "name": "Key Concepts Summary",
+                  "path": "system_analysis_and_design/09-Quick-Reference/Exam-Notes/Key-Concepts-Summary.md",
+                  "type": "file"
+                },
+                {
+                  "name": "Mnemonics List",
+                  "path": "system_analysis_and_design/09-Quick-Reference/Exam-Notes/Mnemonics-List.md",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "Templates",
+              "path": "system_analysis_and_design/09-Quick-Reference/Templates",
+              "type": "folder",
+              "children": [
+                {
+                  "name": "Feasibility Study Template",
+                  "path": "system_analysis_and_design/09-Quick-Reference/Templates/Feasibility-Study-Template.md",
+                  "type": "file"
+                },
+                {
+                  "name": "Requirements Spec Template",
+                  "path": "system_analysis_and_design/09-Quick-Reference/Templates/Requirements-Spec-Template.md",
+                  "type": "file"
+                },
+                {
+                  "name": "Use Case Template",
+                  "path": "system_analysis_and_design/09-Quick-Reference/Templates/Use-Case-Template.md",
+                  "type": "file"
+                },
+                {
+                  "name": "User Story Template",
+                  "path": "system_analysis_and_design/09-Quick-Reference/Templates/User-Story-Template.md",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "Requirements Elicitation Techniques Guide",
+              "path": "system_analysis_and_design/09-Quick-Reference/Requirements-Elicitation-Techniques-Guide.md",
+              "type": "file"
+            },
+            {
+              "name": "SDLC Models Comparison Matrix",
+              "path": "system_analysis_and_design/09-Quick-Reference/SDLC-Models-Comparison-Matrix.md",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "Foundations And Core Concepts",
+          "path": "system_analysis_and_design/Foundations and Core Concepts",
+          "type": "folder",
+          "children": [
+            {
+              "name": "1.4   Intro To Sad",
+              "path": "system_analysis_and_design/Foundations and Core Concepts/1.4 - intro_to_sad.md",
+              "type": "file"
+            },
+            {
+              "name": "1.5   The Systems Analyst Role",
+              "path": "system_analysis_and_design/Foundations and Core Concepts/1.5 - The_Systems_Analyst_Role.md",
+              "type": "file"
+            },
+            {
+              "name": "1.7   As Is Vs To Be Analysis",
+              "path": "system_analysis_and_design/Foundations and Core Concepts/1.7 - As-Is_Vs_To-Be_Analysis.md",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "A Template",
+          "path": "system_analysis_and_design/a_template.md",
+          "type": "file"
+        },
+        {
+          "name": "SAD Master Notes Structure",
+          "path": "system_analysis_and_design/SAD_Master_Notes_Structure.md",
+          "type": "file"
+        }
+      ]
+    },
+    {
+      "name": "Misc / Inbox",
+      "path": "inbox[insta]",
+      "icon": "misc",
+      "fileCount": 1,
+      "children": [
+        {
+          "name": "Computer Networks Complete Cheatsheet",
+          "path": "inbox[insta]/Computer_Networks_Complete_Cheatsheet.md",
+          "type": "file"
+        }
+      ]
+    }
+  ],
+  "rootFiles": [
+    {
+      "name": "Index",
+      "path": "index.md",
+      "type": "file"
+    }
+  ],
+  "totalFiles": 103,
+  "generatedAt": "2026-04-01T04:06:20.399Z"
+}
