@@ -1,0 +1,500 @@
+@import 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #06060e;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #e0e0e8;
+}
+
+/* ── Scene ───────────────────────────────────────── */
+.scene {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 40%, #0d0d1a 0%, transparent 70%),
+    radial-gradient(ellipse 50% 50% at 20% 80%, #0a0a18 0%, transparent 60%),
+    #06060e;
+}
+
+/* Vignette overlay */
+.scene::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, transparent 50%, rgba(0,0,0,0.6) 100%);
+  z-index: 100;
+}
+
+/* ── Category Anchor ─────────────────────────────── */
+.anchor {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transform-origin: center;
+  z-index: 10;
+}
+
+.anchor-sphere {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.anchor-sphere::before {
+  content: '';
+  position: absolute;
+  inset: -20px;
+  border-radius: 50%;
+  background: inherit;
+  opacity: 0.15;
+  filter: blur(20px);
+  animation: pulse 4s ease-in-out infinite;
+}
+
+.anchor-sphere::after {
+  content: '';
+  position: absolute;
+  inset: -40px;
+  border-radius: 50%;
+  background: inherit;
+  opacity: 0.06;
+  filter: blur(40px);
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.15; }
+  50% { transform: scale(1.15); opacity: 0.25; }
+}
+
+.anchor-label {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  opacity: 0.7;
+  white-space: nowrap;
+}
+
+.anchor-count {
+  font-size: 10px;
+  opacity: 0.4;
+}
+
+/* ── Orbiting Card ───────────────────────────────── */
+.orbit-card {
+  position: absolute;
+  width: 110px;
+  padding: 8px 10px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  cursor: pointer;
+  z-index: 5;
+  transition: background 0.2s;
+}
+
+.orbit-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.orbit-card-title {
+  font-size: 9px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: rgba(255, 255, 255, 0.6);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.orbit-card-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  margin-bottom: 4px;
+}
+
+/* ── Launcher (FAB) ──────────────────────────────── */
+.launcher-fab {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.launcher-fab:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
+}
+
+.launcher-fab svg {
+  width: 22px;
+  height: 22px;
+  stroke: rgba(255, 255, 255, 0.7);
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+/* ── Category Panel ──────────────────────────────── */
+.category-panel {
+  position: fixed;
+  bottom: 100px;
+  right: 32px;
+  width: 260px;
+  padding: 20px;
+  background: rgba(12, 12, 24, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  backdrop-filter: blur(20px);
+  z-index: 200;
+}
+
+.category-panel-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.category-panel-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.category-panel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.category-panel-name {
+  font-size: 14px;
+  font-weight: 500;
+  flex: 1;
+}
+
+.category-panel-count {
+  font-size: 11px;
+  opacity: 0.4;
+}
+
+/* ── Category Index Card ─────────────────────────── */
+.index-card {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(440px, 90vw);
+  max-height: 70vh;
+  background: rgba(12, 12, 24, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  backdrop-filter: blur(24px);
+  overflow: hidden;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+}
+
+.index-card-header {
+  padding: 24px 28px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.index-card-header h2 {
+  font-size: 18px;
+  font-weight: 600;
+  flex: 1;
+}
+
+.index-card-close {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition: background 0.2s;
+}
+
+.index-card-close:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.index-card-list {
+  padding: 12px 16px 20px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.index-card-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.index-card-list::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.index-card-note {
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.65);
+  transition: background 0.15s, color 0.15s;
+}
+
+.index-card-note:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* ── Focused Note Card ───────────────────────────── */
+.focused-card {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(720px, 92vw);
+  max-height: 85vh;
+  background: rgba(10, 10, 20, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  backdrop-filter: blur(24px);
+  overflow: hidden;
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+}
+
+.focused-card-header {
+  padding: 20px 24px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  flex-shrink: 0;
+}
+
+.focused-card-header h2 {
+  font-size: 16px;
+  font-weight: 600;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.focused-card-btn {
+  padding: 6px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  font-size: 12px;
+  transition: background 0.2s;
+}
+
+.focused-card-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.focused-card-body {
+  padding: 24px 28px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.focused-card-body::-webkit-scrollbar {
+  width: 5px;
+}
+
+.focused-card-body::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.focused-card-loading {
+  text-align: center;
+  padding: 40px;
+  opacity: 0.4;
+  font-size: 14px;
+}
+
+/* ── Markdown Content ────────────────────────────── */
+.markdown-body {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #c8c8d4;
+}
+
+.markdown-body h1 { font-size: 22px; font-weight: 700; margin: 24px 0 12px; color: #e8e8f0; }
+.markdown-body h2 { font-size: 18px; font-weight: 600; margin: 20px 0 10px; color: #e0e0ec; }
+.markdown-body h3 { font-size: 15px; font-weight: 600; margin: 16px 0 8px; color: #d8d8e4; }
+.markdown-body h4 { font-size: 14px; font-weight: 600; margin: 14px 0 6px; color: #d0d0dc; }
+
+.markdown-body p { margin: 0 0 12px; }
+
+.markdown-body ul, .markdown-body ol {
+  margin: 0 0 12px;
+  padding-left: 24px;
+}
+
+.markdown-body li { margin-bottom: 4px; }
+
+.markdown-body code {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 12.5px;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.markdown-body pre {
+  margin: 0 0 16px;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  overflow-x: auto;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.markdown-body pre code {
+  background: none;
+  padding: 0;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.markdown-body blockquote {
+  margin: 0 0 12px;
+  padding: 8px 16px;
+  border-left: 3px solid rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.markdown-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 16px;
+  font-size: 13px;
+}
+
+.markdown-body th, .markdown-body td {
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: left;
+}
+
+.markdown-body th {
+  background: rgba(255, 255, 255, 0.04);
+  font-weight: 600;
+}
+
+.markdown-body a {
+  color: #7cacf8;
+  text-decoration: none;
+}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 8px 0;
+}
+
+.markdown-body hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin: 20px 0;
+}
+
+/* ── Background Particles ────────────────────────── */
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.03);
+  pointer-events: none;
+}
+
+/* ── Back button ─────────────────────────────────── */
+.back-btn {
+  position: fixed;
+  top: 28px;
+  left: 28px;
+  padding: 8px 18px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  font-size: 13px;
+  z-index: 200;
+  transition: background 0.2s;
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ── Title ───────────────────────────────────────── */
+.scene-title {
+  position: fixed;
+  top: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  opacity: 0.35;
+  z-index: 150;
+  pointer-events: none;
+}

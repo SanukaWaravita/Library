@@ -307,3 +307,87 @@ public class Main {
 } 
 ```
 
+- Output:
+
+    ```
+    3
+    ```
+
+- The statement `int x = 10;` declares an *integer variable* `x` and assigns it the value `10`. 
+
+- The statement `int y = 3;` declares another *integer variable* `y` and assigns it the value `3`. 
+
+- The statement `x /= y;` is an *augmented assignment operator*, which is a shorthand for x = x / y. 
+
+- Since both operands are *integers*, integer division occurs — so `10 / 3` results in `3` (the `.333`... part is discarded). 
+
+- The statement `System.out.println(x);` will display the value of `x` (which is now `3`) in the console.
+
+
+```java
+public class Main { 
+
+    public static void main(String[] args) { 
+        // Augmented Assignment Operators 
+
+        double x = 10; 
+        double y = 3; 
+
+        x /= y; 
+
+        System.out.println(x); 
+    } 
+} 
+```
+
+- Output:
+
+```
+3.3333333333333335 
+```
+
+- The statement `double x = 10;` declares a *double variable* `x` and assigns it the value `10.0`. 
+
+- The statement `double y = 3;` declares another *double variable* `y` and assigns it the value `3.0`. 
+
+- The statement `x /= y;` is an *augmented assignment operator*, which is a shorthand for `x = x / y`. 
+
+- Since both `x` and `y` are *doubles*, *floating-point division* occurs, meaning the result includes decimal values. 
+
+- Here, `10.0 / 3.0` results in approximately `3.3333333333333335`. 
+
+- The statement `System.out.println(x);` will display the value of `x` (which is now about `3.3333333333333335`) in the console. 
+
+```java
+public class Main { 
+
+    public static void main(String[] args) { 
+        // Augmented Assignment Operators 
+
+        int x = 10; 
+        int y = 3; 
+
+        x %= y; 
+
+        System.out.println(x); 
+    } 
+} 
+```
+
+- Output:
+
+```
+1 
+```
+
+- The statement `int x = 10;` declares an *integer variable* `x` and assigns it the value `10`. 
+
+- The statement `int y = 3;` declares another *integer variable* `y` and assigns it the value `3`. 
+
+- The statement `x %= y;` is an *augmented assignment operator*, which is a shorthand for `x = x % y`. 
+
+- This means `x` will now be assigned the remainder when `10` is divided by `3`. 
+
+- Since `10 / 3` is `3` with a remainder of `1`, `x` becomes `1`. 
+
+- The statement `System.out.println(x);` will display the value of `x` (which is now `1`) in the console. 
