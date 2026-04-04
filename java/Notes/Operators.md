@@ -391,3 +391,175 @@ public class Main {
 - Since `10 / 3` is `3` with a remainder of `1`, `x` becomes `1`. 
 
 - The statement `System.out.println(x);` will display the value of `x` (which is now `1`) in the console. 
+
+# Decrement and Increment Operators
+
+```java
+public class Main {
+
+    public static void main(String[] args) {
+
+        // Increment and Decrement Operators
+
+        int x = 1;
+
+        x++;
+
+        System.out.println(x);
+
+    }
+
+}
+```
+
+- Output:
+
+    ```
+    2
+    ```
+
+- The statement `int x = 1;` declares an *integer variable* `x` and assigns it the value `1`.
+
+- The statement `x++;` is the *increment operator*, which increases the value of `x` by `1`. This is shorthand for `x = x + 1;`. After this line, `x` becomes `2`.
+
+- The statement `System.out.println(x);` will display the value of `x` (which is now `2`) in the console.
+
+```java
+public class Main {
+
+    public static void main(String[] args) {
+
+        // Increment and Decrement Operators
+
+        int x = 1;
+
+        x++;
+        x++;
+
+        System.out.println(x);
+
+    }
+
+}
+```
+
+- Output:
+
+    ```
+    3
+    ```
+
+- The statement `int x = 1;` declares an *integer variable* `x` and assigns it the value `1`.
+
+- The statement `x++;` increases the value of `x` by `1`, making `x` equal to `2`.
+
+- The next statement `x++;` again increases the value of `x` by `1`, so now `x` is `3`.
+
+- The statement `System.out.println(x);` displays the value of `x` (which is now `3`) in the console.
+
+```java
+public class Main {
+
+    public static void main(String[] args) {
+
+        // Increment and Decrement Operators
+
+        int x = 1;
+
+        x--;
+
+        System.out.println(x);
+
+    }
+
+}
+```
+
+- Output:
+
+    ```
+    0
+    ```
+
+- The statement `int x = 1;` declares an *integer variable* `x` and assigns it the value `1`.
+
+- The statement `x--;` is the *decrement operator*, which decreases the value of `x` by `1`. This is shorthand for `x = x - 1;`. After this line, `x` becomes `0`.
+
+- The statement `System.out.println(x);` will display the value of `x` (which is now `0`) in the console.
+
+```java
+public class Main {
+
+    public static void main(String[] args) {
+
+        // Increment and Decrement Operators
+
+        int x = 1;
+
+        x--;
+        x--;
+
+        System.out.println(x);
+
+    }
+
+}
+```
+
+- Output:
+
+    ```
+    -1
+    ```
+
+- The statement `int x = 1;` declares an *integer variable* `x` and assigns it the value `1`.
+
+- The first `x--;` decreases the value of `x` by `1`, making `x` equal to `0`.
+
+- The second `x--;` decreases the value of `x` by `1` again, so now `x` is `-1`.
+
+- The statement `System.out.println(x);` displays the value of `x` (which is now `-1`) in the console.
+
+
+# Order of Operators
+
+```java
+public class Main {
+
+    public static void main(String[] args) {
+
+        // ORDER OF OPERATIONS [P-E-M-D-A-S/
+        //                      Please Excuse My Dear Aunt Sally/
+        //                      Please Excuse My Dope Ass Swag]
+
+        double result = 3 + 4 * (7 - 5) / 2.0;
+
+        System.out.println(result);
+
+    }
+
+}
+```
+
+- Output:
+
+    ```
+    7.0
+    ```
+
+- The comment explains *Order of Operations* using the mnemonic **P-E-M-D-A-S**, which stands for:
+    - **P**arentheses
+    - **E**xponents
+    - **M**ultiplication
+    - **D**ivision
+    - **A**ddition
+    - **S**ubtraction
+
+- The statement `double result = 3 + 4 * (7 - 5) / 2.0;` calculates a value following this order:
+    1. Parentheses first: `(7 - 5)` equals `2`.
+    2. Then multiplication: `4 * 2` equals `8`.
+    3. Then division: `8 / 2.0` equals `4.0` (note `2.0` is a *double*, so division results in a *double*).
+    4. Finally addition: `3 + 4.0` equals `7.0`.
+
+- The statement `System.out.println(result);` displays the final result `7.0` in the console.
+
