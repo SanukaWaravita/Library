@@ -1,3 +1,7 @@
+[< Back to Station](../station.md)
+
+---
+
 # String Methods
 
 ## Getting the First Character of a String

@@ -1,3 +1,7 @@
+[< Back to Station](../station.md)
+
+---
+
 - A variable if a placeholder for a value that behaves as the value it contains.  
 
 - Types of variables:

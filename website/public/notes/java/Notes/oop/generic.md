@@ -1,3 +1,7 @@
+[< Back to Station](../../station.md)
+
+---
+
 # Generics
 
 A concept where you can write a class, interface, or method that is compatible with different data types.

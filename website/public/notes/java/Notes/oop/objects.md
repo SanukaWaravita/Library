@@ -1,3 +1,7 @@
+[< Back to Station](../../station.md)
+
+---
+
 # Objects
 
 - An *object* is an entity that holds data (*attributes*) and can perform actions (*methods*).

@@ -1,3 +1,7 @@
+[< Back to Station](../../station.md)
+
+---
+
 # Inheritance
 
 - *Inheritance* is where one class inherits the methods and attributes from another class.

@@ -1,3 +1,7 @@
+[< Back to Station](../station.md)
+
+---
+
 # Random Class
 
 ```java

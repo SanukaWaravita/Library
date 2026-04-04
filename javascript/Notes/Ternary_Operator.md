@@ -1,3 +1,7 @@
+[< Back to Station](../station.md)
+
+---
+
 # Ternary Operator
 
 - A shortcut to `if{}` and `else{}` statements.
