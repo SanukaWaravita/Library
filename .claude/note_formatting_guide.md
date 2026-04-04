@@ -36,6 +36,10 @@ This document describes the formatting conventions used in the Java notes so tha
 - Output is introduced with `- Output:` (as a bullet point) followed by a **fenced code block with no language tag**.
 - Sometimes the label is just `- Output` (no colon) or `- Code:` -- these are interchangeable in the notes.
 - When showing **user input alongside output**, the label is `- Output + User Input:` or `- Output + User input:`.
+- When a program has **interactive input followed by computed output**, the two-step pattern is used:
+    1. `- Output + User Input:` with a fenced code block showing the prompts and the user's typed input.
+    2. `- Output:` with a fenced code block showing the program's computed result.
+    This separates what the user types from what the program calculates, making it clear which part is input and which is output.
 - Output blocks are **indented by 4 spaces** when they appear under a bullet point, to nest visually under the bullet.
 - Occasionally, output blocks appear at the **root level** (no indentation) directly after a code block -- this is acceptable but the indented style is more common.
 
@@ -51,6 +55,7 @@ This document describes the formatting conventions used in the Java notes so tha
 - When a concept repeats across multiple examples (e.g., variable declarations), the explanation is still given each time, sometimes with slight variation.
 - Emphasis uses **italics** (`*text*`) for terms being introduced or highlighted (e.g., *integer variable*, *augmented assignment operator*, *floating-point division*).
 - Bold (`**text**`) is used for key terms in definitions or important distinctions (e.g., **declaration**, **assignment**).
+- **If the raw notes have no explanations**, add them during formatting. Every code block should be followed by bullet-point explanations that walk through what the code does, even if the original notes only had the code and output. Write explanations in the same beginner-friendly style as the rest of the notes.
 
 ---
 
