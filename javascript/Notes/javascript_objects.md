@@ -1,193 +1,182 @@
-A collection of related properties and/ or methods. 
-
- 
-
-Can represent real world objects (people, products, places). 
-
- 
-
-Object = {key:value, function()} 
+[< Back to Station](../station.md)
 
 ---
 
-const person = { 
+# JavaScript Objects
 
-    firstName: "Spongebob", 
+A **JavaScript object** is a *collection of related properties and/or methods*. Objects can represent real world things such as people, products, or places.
 
-    lastName: "Squarepants", 
+The general structure of an object is: `Object = {key:value, function()}`
 
-    age: 30, 
+---
 
-    isEmployed: true, 
+## Creating an Object
 
-} 
+```javascript
+const person = {
+    firstName: "Spongebob",
+    lastName: "Squarepants",
+    age: 30,
+    isEmployed: true,
+}
+```
 
- 
+- The statement `const person = { ... }` creates an object named `person` using *object literal notation*.
 
-console.log(person.firstName); 
+- Inside the curly braces, we define **properties** as `key:value` pairs. `firstName`, `lastName`, `age`, and `isEmployed` are the keys, and `"Spongebob"`, `"Squarepants"`, `30`, and `true` are their respective values.
 
-console.log(person.lastName); 
+- Using `const` is not strictly necessary -- you can use `let` as well -- but `const` prevents the variable from being reassigned to a different value.
 
-console.log(person.age); 
+---
 
-console.log(person.isEmployed); 
+## Accessing Properties
 
-Spongebob 
+```javascript
+const person = {
+    firstName: "Spongebob",
+    lastName: "Squarepants",
+    age: 30,
+    isEmployed: true,
+}
 
-Squarepants 
+console.log(person.firstName);
+console.log(person.lastName);
+console.log(person.age);
+console.log(person.isEmployed);
+```
 
-30 
+- Output:
 
-true 
+    ```
+    Spongebob
+    Squarepants
+    30
+    true
+    ```
 
-"const" is not necessary. 
+- The statement `console.log(person.firstName)` accesses the `firstName` property of the `person` object using *dot notation* and prints its value, `"Spongebob"`.
 
+- Similarly, `person.lastName` returns `"Squarepants"`, `person.age` returns `30`, and `person.isEmployed` returns `true`.
 
-const person1 = { 
+---
 
-    firstName: "Spongebob", 
+## Multiple Objects
 
-    lastName: "Squarepants", 
+```javascript
+const person1 = {
+    firstName: "Spongebob",
+    lastName: "Squarepants",
+    age: 30,
+    isEmployed: true,
+}
+
+const person2 = {
+    firstName: "Patrick",
+    lastName: "Star",
+    age: 42,
+    isEmployed: false,
+}
+
+console.log(person1.firstName);
+console.log(person1.lastName);
+console.log(person1.age);
+console.log(person1.isEmployed);
 
-    age: 30, 
+console.log(person2.firstName);
+console.log(person2.lastName);
+console.log(person2.age);
+console.log(person2.isEmployed);
+```
 
-    isEmployed: true, 
+- Output:
 
-} 
+    ```
+    Spongebob
+    Squarepants
+    30
+    true
+    Patrick
+    Star
+    42
+    false
+    ```
 
- 
+- Here we create two separate objects, `person1` and `person2`, each with the same set of property keys but different values.
 
-const person2 ={ 
+- `person1.firstName` returns `"Spongebob"` while `person2.firstName` returns `"Patrick"`. Each object maintains its own independent set of values.
 
-    firstName: "Patrick", 
+---
 
-    lastName: "Star", 
+## Adding Methods
 
-    age: 42, 
+A **method** is a function that is stored as a property inside an object.
 
-    isEmployed: false, 
+```javascript
+const person1 = {
+    firstName: "Spongebob",
+    lastName: "Squarepants",
+    age: 30,
+    isEmployed: true,
+    sayHello: function(){console.log("Hi! I am Spongebob!")},
+}
 
-} 
+const person2 = {
+    firstName: "Patrick",
+    lastName: "Star",
+    age: 42,
+    isEmployed: false,
+    sayHello: () => {console.log("Hi! I am Patrick...")},
+}
 
- 
+person1.sayHello();
+person2.sayHello();
+```
 
-console.log(person1.firstName); 
+- Output:
 
-console.log(person1.lastName); 
+    ```
+    Hi! I am Spongebob!
+    Hi! I am Patrick...
+    ```
 
-console.log(person1.age); 
+- The `sayHello` property in `person1` is defined using a *function expression*: `function(){console.log("Hi! I am Spongebob!")}`.
 
-console.log(person1.isEmployed); 
+- The `sayHello` property in `person2` is defined using an *arrow function*: `() => {console.log("Hi! I am Patrick...")}`.
 
- 
+- Both syntax styles work for defining methods. You call a method using dot notation followed by parentheses, like `person1.sayHello()`.
 
-console.log(person2.firstName); 
+### Adding Multiple Methods
 
-console.log(person2.lastName); 
+```javascript
+const person1 = {
+    firstName: "Spongebob",
+    lastName: "Squarepants",
+    age: 30,
+    isEmployed: true,
+    sayHello: function(){console.log("Hi! I am Spongebob!")},
+    eat: () => {console.log("I am eating a Krabby Patty")},
+}
 
-console.log(person2.age); 
+const person2 = {
+    firstName: "Patrick",
+    lastName: "Star",
+    age: 42,
+    isEmployed: false,
+    sayHello: () => {console.log("Hi! I am Patrick...")},
+    eat: function(){console.log("I am eating roast beef, chicken, and pizza")}
+}
 
-console.log(person2.isEmployed); 
+person1.eat();
+person2.eat();
+```
 
-Spongebob 
+- Output:
 
-Squarepants 
+    ```
+    I am eating a Krabby Patty
+    I am eating roast beef, chicken, and pizza
+    ```
 
-30 
+- Here each object has two methods: `sayHello` and `eat`. The `eat` method in `person1` uses an *arrow function*, while the `eat` method in `person2` uses a *function expression*.
 
-true 
-
-Patrick 
-
-Star 
-
-42 
-
-false 
-
-
-const person1 = { 
-
-    firstName: "Spongebob", 
-
-    lastName: "Squarepants", 
-
-    age: 30, 
-
-    isEmployed: true, 
-
-    sayHello: function(){console.log("Hi! I am Spongebob!")}, 
-
-} 
-
- 
-
-const person2 ={ 
-
-    firstName: "Patrick", 
-
-    lastName: "Star", 
-
-    age: 42, 
-
-    isEmployed: false, 
-
-    sayHello: () => {console.log("Hi! I am Patrick...")}, 
-
-} 
-
- 
-
-person1.sayHello(); 
-
-person2.sayHello(); 
-
-Hi! I am Spongbob! 
-
-Hi! I am Patrick… 
-
-We can use function expressions ("function(){console.log("Hi! I am Spongebob!")}") or arrow functions ("() => {console.log("Hi! I am Patrick...")}"). 
-
-
-const person1 = { 
-
-    firstName: "Spongebob", 
-
-    lastName: "Squarepants", 
-
-    age: 30, 
-
-    isEmployed: true, 
-
-    sayHello: function(){console.log("Hi! I am Spongebob!")}, 
-
-    eat: () => {console.log("I am eating a Krabby Patty")}, 
-
-} 
-
- 
-
-const person2 ={ 
-
-    firstName: "Patrick", 
-
-    lastName: "Star", 
-
-    age: 42, 
-
-    isEmployed: false, 
-
-    sayHello: () => {console.log("Hi! I am Patrick...")}, 
-
-    eat: function(){console.log("I am eating roast beef, chicken, and pizza")} 
-
-} 
-
- 
-
-person1.eat(); 
-
-person2.eat(); 
-
-I am eating a Krabby Patty 
-I am eating roast beef, chicken, and pizza 
+- We can use both **function expressions** and **arrow functions** interchangeably when defining object methods. The statement `person1.eat()` calls the `eat` method on `person1`, printing `"I am eating a Krabby Patty"`.

@@ -1,114 +1,254 @@
-// ARRAY 
-
-// a variable like structure that can hold more than 1 value 
+[< Back to Station](../station.md)
 
 ---
 
-let fruits = ["apple", "orange", "banana"]; 
+# Array
 
-// adding plural name to arrays helps with readability (good practice) 
+- An **array** is a variable-like structure that can hold more than one value.
 
-console.log(fruits); // Outputs the elements in the array 
+```javascript
+let fruits = ["apple", "orange", "banana"];
 
+console.log(fruits);
+```
 
-let fruits = ["apple", "orange", "banana"]; 
+- Output:
 
-console.log(fruits); 
+    ```
+    ["apple", "orange", "banana"]
+    ```
 
-console.log(fruits[0]); // Accesses and outputs the element at index 0 
+- The statement `let fruits = ["apple", "orange", "banana"];` declares an array called `fruits` containing three string elements.
 
-console.log(fruits[1]); // Accesses and outputs the element at index 1 
+- Adding a *plural name* to arrays helps with readability (good practice).
 
-console.log(fruits[2]); // Accesses and outputs the element at index 2 
+- The statement `console.log(fruits);` outputs all the elements in the array.
 
+---
 
-let fruits = ["apple", "orange", "banana"]; 
+## Accessing Elements by Index
 
-fruits[2] = "coconut"; // Replaces the element at index 2 
+```javascript
+let fruits = ["apple", "orange", "banana"];
 
-console.log(fruits); 
+console.log(fruits);
+console.log(fruits[0]);
+console.log(fruits[1]);
+console.log(fruits[2]);
+```
 
+- Output:
 
-let fruits = ["apple", "orange", "banana"]; 
+    ```
+    ["apple", "orange", "banana"]
+    apple
+    orange
+    banana
+    ```
 
-fruits[3] = "coconut";  // Since there is no index 3 in the existing array, 
+- The statement `console.log(fruits[0]);` accesses and outputs the element at index `0`, which is `"apple"`.
 
-                        // the new element will be added to the array 
+- The statement `console.log(fruits[1]);` accesses and outputs the element at index `1`, which is `"orange"`.
 
-console.log(fruits); 
+- The statement `console.log(fruits[2]);` accesses and outputs the element at index `2`, which is `"banana"`.
 
+---
 
-let fruits = ["apple", "orange", "banana"]; 
+## Replacing Elements
 
-fruits.push("coconut"); // Adds a new element to the end of the array 
+```javascript
+let fruits = ["apple", "orange", "banana"];
 
-fruits.pop(); // Removes the last element of the array 
+fruits[2] = "coconut";
 
-fruits.unshift("mango"); // Adds a new element to the start of the array 
+console.log(fruits);
+```
 
-fruits.shift(); // Remoes an element from the beginning 
+- Output:
 
+    ```
+    ["apple", "orange", "coconut"]
+    ```
 
-let fruits = ["apple", "orange", "banana"]; 
+- The statement `fruits[2] = "coconut";` replaces the element at index `2` (which was `"banana"`) with `"coconut"`.
 
-let numOfFruits = fruits.length; // Returns the length of an array, or the number of elements in an array 
+---
 
+## Adding Elements by Index
 
-let fruits = ["apple", "orange", "banana"]; 
+```javascript
+let fruits = ["apple", "orange", "banana"];
 
-let index = fruits.indexOf("apple"); // Returns the index of the element 
+fruits[3] = "coconut";
 
+console.log(fruits);
+```
 
-let fruits = ["apple", "orange", "banana"]; 
+- Output:
 
-for(let i = 0; i < fruits.length; i++){ 
+    ```
+    ["apple", "orange", "banana", "coconut"]
+    ```
 
-    console.log(fruits[i]); 
+- Since there is no index `3` in the existing array, the statement `fruits[3] = "coconut";` adds the new element `"coconut"` to the end of the array.
 
-} 
+---
 
+## Array Methods: push, pop, unshift, shift
 
-let fruits = ["apple", "orange", "banana"]; 
+```javascript
+let fruits = ["apple", "orange", "banana"];
 
-for(let i = fruits.length - 1; i >= 0; i--){ 
+fruits.push("coconut");
+fruits.pop();
+fruits.unshift("mango");
+fruits.shift();
+```
 
-    console.log(fruits[i]); 
+- The statement `fruits.push("coconut");` adds a new element `"coconut"` to the **end** of the array.
 
-} 
+- The statement `fruits.pop();` removes the **last** element of the array.
 
-// The above for loop will output the elements in the array in the reverse order 
+- The statement `fruits.unshift("mango");` adds a new element `"mango"` to the **start** of the array.
 
+- The statement `fruits.shift();` removes an element from the **beginning** of the array.
 
-let fruits = ["apple", "orange", "banana"]; 
+---
 
-// Enchanced for loop 
+## Array Length
 
-for(let fruit of fruits){ 
+```javascript
+let fruits = ["apple", "orange", "banana"];
 
-    // Here "fruit" can be any variable, but its good practice to use the singular version of the array name 
+let numOfFruits = fruits.length;
+```
 
-    console.log(fruit); 
+- The `fruits.length` property returns the length of the array, or the number of elements in the array. In this case, `numOfFruits` will be assigned the value `3`.
 
-} 
+---
 
+## indexOf
 
-let fruits = ["apple", "orange", "banana"]; 
+```javascript
+let fruits = ["apple", "orange", "banana"];
 
-fruits.sort(); // Sorts an array in alphabetical order. 
+let index = fruits.indexOf("apple");
+```
 
-for(let fruit of fruits){ 
+- The statement `fruits.indexOf("apple");` returns the index of the element `"apple"` in the array. In this case, `index` will be assigned the value `0`.
 
-    console.log(fruit); 
+---
 
-} 
+## Iterating with a For Loop
 
+```javascript
+let fruits = ["apple", "orange", "banana"];
 
-let fruits = ["apple", "orange", "banana"]; 
+for(let i = 0; i < fruits.length; i++){
+    console.log(fruits[i]);
+}
+```
 
-fruits.sort().reverse(); // Sorts an array in reverse alphabetical order. 
+- Output:
 
-for(let fruit of fruits){ 
+    ```
+    apple
+    orange
+    banana
+    ```
 
-    console.log(fruit); 
+- This `for` loop iterates through the array from index `0` to `fruits.length - 1`, printing each element one by one.
 
-} 
+---
+
+## Iterating in Reverse
+
+```javascript
+let fruits = ["apple", "orange", "banana"];
+
+for(let i = fruits.length - 1; i >= 0; i--){
+    console.log(fruits[i]);
+}
+```
+
+- Output:
+
+    ```
+    banana
+    orange
+    apple
+    ```
+
+- This `for` loop starts from the last index (`fruits.length - 1`) and decrements `i` until it reaches `0`, outputting the elements in **reverse order**.
+
+---
+
+## Enhanced For Loop (for...of)
+
+```javascript
+let fruits = ["apple", "orange", "banana"];
+
+for(let fruit of fruits){
+    console.log(fruit);
+}
+```
+
+- Output:
+
+    ```
+    apple
+    orange
+    banana
+    ```
+
+- The `for...of` loop iterates over each element in the array and assigns it to the variable `fruit` on each iteration.
+
+- Here `fruit` can be any variable name, but it is good practice to use the singular version of the array name.
+
+---
+
+## Sorting Alphabetically
+
+```javascript
+let fruits = ["apple", "orange", "banana"];
+
+fruits.sort();
+
+for(let fruit of fruits){
+    console.log(fruit);
+}
+```
+
+- Output:
+
+    ```
+    apple
+    banana
+    orange
+    ```
+
+- The statement `fruits.sort();` sorts the array in **alphabetical order**.
+
+---
+
+## Sorting in Reverse Alphabetical Order
+
+```javascript
+let fruits = ["apple", "orange", "banana"];
+
+fruits.sort().reverse();
+
+for(let fruit of fruits){
+    console.log(fruit);
+}
+```
+
+- Output:
+
+    ```
+    orange
+    banana
+    apple
+    ```
+
+- The statement `fruits.sort().reverse();` first sorts the array in alphabetical order, then reverses it, resulting in **reverse alphabetical order**.

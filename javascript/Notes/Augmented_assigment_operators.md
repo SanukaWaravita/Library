@@ -1,289 +1,321 @@
-This is a shortcut to writing arithmetic expressions without having to type the variables twice. 
+[< Back to Station](../station.md)
 
 ---
 
-# Assignment Operators
+# Augmented Assignment Operators
 
+- **Augmented assignment operators** are a shortcut to writing arithmetic expressions without having to type the variables twice.
 
-PROGRAM 
+| Program | Output | Description |
+|---------|--------|-------------|
+| `let x = 10 + 5;` | `15` | |
+| `x += 10;` | | `x = x + 10` |
+| `x *= 4;` | | `x = x * 4` |
+| `x++` | | `x = x + 1` |
+| `x--` | | `x = x - 1` |
+| `console.log(x);` | | |
 
-OUTPUT 
+---
 
-DESCRIPTION 
-
-let x = 10 + 5; 
-
-15 
-
- 
-
-x += 10; 
-
- 
-
-x = x + 10 
-
-x *= 4; 
-
- 
-
-x = x * 4 
-
-x++ 
-
- 
-
-x = x + 1 
-
-x-- 
-
- 
-
-x = x - 1 
-
-console.log(x); 
-
- 
 # Addition
 
-let students = 30; 
+```javascript
+let students = 30;
 
- 
+students += 1;
 
-students += 1; 
+console.log(students);
+```
 
- 
+- Output:
 
-console.log(students); 
+    ```
+    31
+    ```
 
-The variable 'students' is now assigned the value '30' and acts as that value. 
+- The statement `let students = 30;` declares the variable `students` and assigns it the value `30`.
 
- 
+- The `+` is the *addition operator*.
 
-'+' - Addition operator. 
+- The statement `students += 1;` is shorthand for `students = students + 1;`, which adds `1` to the current value of `students`.
 
- 
+- The console will display `31` because `30 + 1` (from the arithmetic expression `students += 1;`) is `31`.
 
-The console log will display '31' because 30 + 1 (from the arithmetic expression 'students += 1;') is 31. 
-
+---
 
 # Subtraction
 
-let students = 30; 
+```javascript
+let students = 30;
 
- 
+students -= 1;
 
-students -= 1; 
+console.log(students);
+```
 
- 
+- Output:
 
-console.log(students) 
+    ```
+    29
+    ```
 
-'-' - Subtraction operator. 
+- The `-` is the *subtraction operator*.
 
- 
+- The statement `students -= 1;` is shorthand for `students = students - 1;`.
 
-The console log will display '29' because 30 - 1 (from the arithmetic expression 'students -= 1;') is 29. 
+- The console will display `29` because `30 - 1` (from the arithmetic expression `students -= 1;`) is `29`.
 
+---
 
 # Multiplication
 
-let students = 30; 
+```javascript
+let students = 30;
 
- 
+students *= 2;
 
-students *= 2; 
+console.log(students);
+```
 
- 
+- Output:
 
-console.log(students); 
+    ```
+    60
+    ```
 
-'*' - Multiplication operator. 
+- The `*` is the *multiplication operator*.
 
- 
+- The statement `students *= 2;` is shorthand for `students = students * 2;`.
 
-The console log will display '60' because 30 * 2 (from the arithmetic expression 'students *= 1') is 60. 
+- The console will display `60` because `30 * 2` (from the arithmetic expression `students *= 2;`) is `60`.
 
+---
 
 # Division
 
-let students = 30; 
+```javascript
+let students = 30;
 
- 
+students /= 2;
 
-students /= 2; 
+console.log(students);
+```
 
- 
+- Output:
 
-console.log(students); 
+    ```
+    15
+    ```
 
-'/' - Division operator. 
+- The `/` is the *division operator*.
 
- 
+- The statement `students /= 2;` is shorthand for `students = students / 2;`.
 
-The console log will display '15' because 30 / 2 (from the arithmetic expression 'students /= 1;') is 15. 
+- The console will display `15` because `30 / 2` (from the arithmetic expression `students /= 2;`) is `15`.
 
+---
 
 # Exponent
 
-let students = 30; 
+```javascript
+let students = 30;
 
- 
+students **= 2;
 
-students **= 2; 
+console.log(students);
+```
 
- 
+- Output:
 
-console.log(students); 
+    ```
+    900
+    ```
 
-'**' - Exponent operator. 
+- The `**` is the *exponent operator*.
 
- 
+- The statement `students **= 2;` is shorthand for `students = students ** 2;`.
 
-The console will display '900' because 302 (from the arithmetic expression 'students **= 2;') is 900 (also equal to 30 × 30 = 900). 
+- The console will display `900` because 30 squared (from the arithmetic expression `students **= 2;`) is `900` (also equal to 30 x 30 = 900).
 
+---
 
 # Modulus
 
-let students = 30; 
+```javascript
+let students = 30;
 
- 
+students %= 2;
 
-students %= 2; 
+console.log(students);
+```
 
- 
+- Output:
 
-console.log(students); 
+    ```
+    0
+    ```
 
-'%' - Modulus operator. 
+- The `%` is the *modulus operator*.
 
- 
+- The statement `students %= 2;` is shorthand for `students = students % 2;`.
 
-The console log will display '0' because 30 can be equally divided to 2. 
+- The console will display `0` because `30` can be equally divided by `2`.
 
+---
 
-let students = 30; 
+```javascript
+let students = 30;
 
- 
+students %= 2;
 
-students %= 2; 
+console.log(students);
+```
 
- 
+- Output:
 
-console.log(students); 
+    ```
+    0
+    ```
 
-The modulus operator can be helpful in the event you are having to find whether a number is even or odd.  
+- The modulus operator can be helpful when you need to find whether a number is **even** or **odd**.
 
- 
+- The console will display `0` because `30` can equally be divided by two; this shows that `30` is an *even number*.
 
-The console will display '0' because 30 can equally be divided to two/ or divided by two; this shows that 30 is an even number. 
+---
 
+```javascript
+let students = 31;
 
-let students = 31; 
+students %= 2;
 
- 
+console.log(students);
+```
 
-students %= 2; 
+- Output:
 
- 
+    ```
+    1
+    ```
 
-console.log(students); 
+- The console will display `1` because `31` cannot be equally divided by two; this shows that `31` is an *odd number*.
 
-The console will display '1' (because 31 cannot be equally divided to two parts); this shows that 31 is an odd number. 
-
+---
 
 # Increment and Decrement
 
-let students = 30; 
+```javascript
+let students = 30;
 
- 
+students++;
 
-students++; 
+console.log(students);
+```
 
- 
+- Output:
 
-console.log(students); 
+    ```
+    31
+    ```
 
-'++' - Increment operator. 
+- The `++` is the *increment operator*.
 
- 
+- It increases the value (e.g. `30`) of the specified variable (e.g. `students`) by `1`.
 
-Increases the value (e.g. '30') of the specified operator (e.g. 'students') by 1. 
+- The console will display `31`, as `30 + 1 = 31`.
 
- 
+---
 
-The console will display '31', as 30 + 1 = 31.  
+```javascript
+let students = 30;
 
+students--;
 
-let students = 30; 
+console.log(students);
+```
 
- 
+- Output:
 
-students--; 
+    ```
+    29
+    ```
 
- 
+- The `--` is the *decrement operator*.
 
-console.log(students); 
+- It decreases the value (e.g. `30`) of the specified variable (e.g. `students`) by `1`.
 
-'--' - Decrement operator. 
+- The console will display `29`, as `30 - 1 = 29`.
 
- 
+---
 
-Decreases the value (e.g. '30') of the specified operator (e.g. 'students') by 1. 
+# Operator Precedence
 
- 
+- Given a very complex equation, for example `let result = 1 + 2 * 3 + 4 ** 2;`, **operator precedence** determines in which order each part of the equation is solved.
 
-The console will display '29', as 30 - 1 = 29 . 
+- Operator precedence (highest to lowest):
+    1. Parenthesis `()`
+    2. Exponents `**`
+    3. Multiplication `*`, Division `/`, and Modulo `%`
+    4. Addition `+` and Subtraction `-`
 
+---
 
-# Operator Recedence
+```javascript
+let result = 1 + 2 * 3 + 4 ** 2;
 
-Given a very complex equation, for example 'let result = 1 + 2 * 3 + 4 ** 2;', operator precedence is in which order each part of the equation is supposed to be solved. 
+console.log(result);
+```
 
-Operator precedence: 
+- Output:
 
-Parenthesis '()' 
+    ```
+    23
+    ```
 
-Exponents '**' 
+- The console will display `23`, because starting from the left and working through following operator precedence:
 
-Multiplication '*' & division '/' & modulo '%' 
+    ```
+    1 + 2 * 3 + 4 ** 2
+    1 + 2 * 3 + 16
+    1 + 6 + 16
+    1 + 22
+    23
+    ```
 
-Addition '+' & subtraction '-' 
+---
 
-let result = 1 + 2 * 3 + 4 ** 2; 
+```javascript
+let result = 12 % 5 + 8 / 2;
 
- 
-console.log(result); 
+console.log(result);
+```
 
-The console will display '23', because, starting from the left and working through to the right following the operator procedence, 42 = 16, 2 × 3 = 6 and finally 16 + 6 + 1 = 23. 
+- Output:
 
- 
+    ```
+    6
+    ```
 
-1 + 2 × 3 + 42; 
-1 + 2 × 3 + 16; 
-1 + 6 + 16;  
-1 + 22; 
-23.    
+- The console will display `6`, because following operator precedence:
 
+    ```
+    12 % 5 + 8 / 2
+    2 + 8 / 2
+    2 + 4
+    6
+    ```
 
-let result = 12 % 5 + 8 / 2; 
+---
 
- 
+```javascript
+let result = 6 / 128;
 
-console.log(result); 12 % 5 + 8 ÷ 2; 
-2 + 8 ÷ 2; 
-2 + 4; 
-6 
+console.log(result);
+```
 
- 
+- Output:
 
-The console will display '6'. 
+    ```
+    0.046875
+    ```
 
-
-let result = 6 / 128; 
-
- 
-
-console.log(result); 
-
-The console will display '0.046875'. 
+- The console will display `0.046875`, which is the result of dividing `6` by `128`.

@@ -1,109 +1,100 @@
-this = reference to the object where THIS is used. 
-
- 
-
-(the object depends on the immediate context). 
-
- 
-
-person.name = this.name. 
+[< Back to Station](../station.md)
 
 ---
 
-const person1 = { 
+# The this Keyword
 
-    name: "Spongebob", 
+`this` is a reference to the object where `this` is used. The object it refers to depends on the immediate context.
 
-    favFood: "hamburgers",  
+For example: `person.name = this.name` -- inside a method of `person`, `this` refers to that `person` object.
 
-    sayHello: function(){console.log(`Hi! I am ${this.name}`)}, 
+---
 
-    eat: function(){console.log(`${this.name} is eating ${this.favFood}`)} 
+## Using this in Object Methods
 
-} 
+```javascript
+const person1 = {
+    name: "Spongebob",
+    favFood: "hamburgers",
+    sayHello: function(){console.log(`Hi! I am ${this.name}`)},
+    eat: function(){console.log(`${this.name} is eating ${this.favFood}`)}
+}
 
- 
+const person2 = {
+    name: "Patrick",
+    favFood: "pizza",
+    sayHello: function(){console.log(`Hi! I am ${this.name}`)},
+    eat: function(){console.log(`${this.name} is eating ${this.favFood}`)}
+}
 
-const person2 = { 
+person1.sayHello();
+person1.eat();
+```
 
-    name: "Patrick", 
+- Output:
 
-    favFood: "pizza",  
+    ```
+    Hi! I am Spongebob
+    Spongebob is eating hamburgers
+    ```
 
-    sayHello: function(){console.log(`Hi! I am ${this.name}`)}, 
+- The `this` keyword inside `person1.sayHello()` refers to the `person1` object, so `this.name` evaluates to `"Spongebob"`.
+- Similarly, `this.favFood` inside `person1.eat()` evaluates to `"hamburgers"` because `this` refers to `person1`.
+- Each object has its own `name` and `favFood` properties, and `this` ensures the method accesses the correct object's properties.
 
-    eat: function(){console.log(`${this.name} is eating ${this.favFood}`)} 
+```javascript
+const person1 = {
+    name: "Spongebob",
+    favFood: "hamburgers",
+    sayHello: function(){console.log(`Hi! I am ${this.name}`)},
+    eat: function(){console.log(`${this.name} is eating ${this.favFood}`)}
+}
 
-} 
+const person2 = {
+    name: "Patrick",
+    favFood: "pizza",
+    sayHello: function(){console.log(`Hi! I am ${this.name}`)},
+    eat: function(){console.log(`${this.name} is eating ${this.favFood}`)}
+}
 
- 
+person2.sayHello();
+person2.eat();
+```
 
-person1.sayHello(); 
+- Output:
 
-person1.eat(); 
+    ```
+    Hi! I am Patrick
+    Patrick is eating pizza
+    ```
 
-Hi! I am Spongebob 
+- When we call `person2.sayHello()`, `this` now refers to the `person2` object, so `this.name` evaluates to `"Patrick"`.
+- `person2.eat()` uses `this.favFood` which resolves to `"pizza"` because `this` points to `person2`.
+- The same method code works differently depending on which object calls it -- that is the power of `this`.
 
-Spongebob is eating hamburgers 
+---
 
+## Arrow Functions and this (Gotcha)
 
-const person1 = { 
+```javascript
+const person = {
+    name: "Spongebob",
+    favFood: "hamburgers",
+    sayHello: () => {console.log(`Hi! I am ${this.name}`)},
+    eat: () => {console.log(`${this.name} is eating ${this.favFood}`)}
+}
 
-    name: "Spongebob", 
+person.sayHello();
+person.eat();
+```
 
-    favFood: "hamburgers",  
+- Output:
 
-    sayHello: function(){console.log(`Hi! I am ${this.name}`)}, 
+    ```
+    Hi! I am 
+    is eating undefined
+    ```
 
-    eat: function(){console.log(`${this.name} is eating ${this.favFood}`)} 
-
-} 
-
- 
-
-const person2 = { 
-
-    name: "Patrick", 
-
-    favFood: "pizza",  
-
-    sayHello: function(){console.log(`Hi! I am ${this.name}`)}, 
-
-    eat: function(){console.log(`${this.name} is eating ${this.favFood}`)} 
-
-} 
-
- 
-
-person2.sayHello(); 
-
-person2.eat(); 
-
-Hi! I am Patrick 
-
-Patrick is eating pizza 
-
-
-const person = { 
-
-    name: "Spongebob", 
-
-    favFood: "hamburgers",  
-
-    sayHello: () => {console.log(`Hi! I am ${this.name}`)}, 
-
-    eat: () => {console.log(`${this.name} is eating ${this.favFood}`)} 
-
-} 
-
- 
-
-person.sayHello(); 
-
-person.eat(); 
-
-Hi! I am 
-
-is eating undefined 
-
-Here, the "this" keyword is making a reference to the window object, which is why its empty. 
+- **Arrow functions do not have their own `this` context.** Instead, they inherit `this` from the enclosing *lexical scope*, which in this case is the `window` object (in a browser).
+- Since the `window` object does not have `name` or `favFood` properties, `this.name` is empty and `this.favFood` is `undefined`.
+- This is a common gotcha -- when defining methods inside an object that use `this`, always use a regular `function()` declaration instead of an arrow function `() =>`.

@@ -1,115 +1,126 @@
-// VARIABLE SCOPE 
-
- 
-
-// Where a variable is recognized and accessible (local vs global) 
-
-In large programs stick with local variables instead of global ones, because you might run into naming conflicts as there is a change you may reuse the same global scope variable. 
+[< Back to Station](../station.md)
 
 ---
 
-function function1(){ 
+# Variable Scope
 
-    let x = 1; 
+*Variable scope* determines where a variable is recognized and accessible in your code. Variables can have **local scope** or **global scope**.
 
-    // This variable has a different scope to function2 x 
+**Tip:** In large programs, stick with local variables instead of global ones, because you might run into naming conflicts -- there is a chance you may reuse the same variable name.
 
-    // This variable is local scope 
+---
 
-    console.log(x); 
+## Local Scope
 
-} 
+```javascript
+function function1(){
+    let x = 1;
+    console.log(x);
+}
 
-function function2(){ 
+function function2(){
+    let x = 2;
+    console.log(x);
+}
 
-    let x = 2; 
+function1();
+function2();
+```
 
-    // This variable has a different scope to function1 x 
+- Output:
 
-    // This variable is also local scope 
+    ```
+    1
+    2
+    ```
 
-    console.log(x); 
+- The variable `let x = 1` inside `function1()` is *local* to that function -- it only exists within the curly braces of `function1`.
+- The variable `let x = 2` inside `function2()` is a completely separate variable that is *local* to `function2`.
+- Even though both variables are named `x`, they do not conflict because each one has its own **local scope** within its respective function.
 
-} 
+---
 
-function1(); 
+## Functions Cannot Access Other Functions' Variables
 
-function2(); 
+```javascript
+function function1(){
+    let x = 1;
+    console.log(y);
+}
 
+function function2(){
+    let y = 2;
+    console.log(x);
+}
 
-function function1(){ 
+function1();
+function2();
+```
 
-    let x = 1; 
+- Functions cannot see inside of other functions.
+- `function1()` tries to access `y`, which is local to `function2()` -- this will cause a **ReferenceError** because `y` does not exist in `function1`'s scope.
+- Similarly, `function2()` tries to access `x`, which is local to `function1()` -- this will also cause an error.
+- Each function's local variables are completely isolated from other functions.
 
-    console.log(y); 
+---
 
-} 
+## Global Scope
 
-function function2(){ 
+```javascript
+let x = 3;
 
-    let y = 2; 
+function function1(){
+    console.log(x);
+}
 
-    console.log(x); 
+function function2(){
+    console.log(x);
+}
 
-} 
+function1();
+function2();
+```
 
-// Functions cannot see inside of other functions 
+- Output:
 
-function1(); 
+    ```
+    3
+    3
+    ```
 
-function2(); 
+- The variable `let x = 3` is declared outside of any function, making it a **global scope** variable.
+- Both `function1()` and `function2()` can access `x` because global variables are visible everywhere in the program.
+- Both functions print `3` because they are reading the same global variable `x`.
 
+---
 
-let x = 3; // This is global scope 
+## Local Scope Takes Precedence Over Global
 
-function function1(){ 
+```javascript
+let x = 3;
 
-    console.log(x); 
+function function1(){
+    let x = 1;
+    console.log(x);
+}
 
-} 
+function function2(){
+    let x = 2;
+    console.log(x);
+}
 
-function function2(){ 
+function1();
+function2();
+```
 
-    console.log(x); 
+- Output:
 
-} 
+    ```
+    1
+    2
+    ```
 
-function1(); 
-
-function2(); 
-
-
-3 
-
-3 
-
-
-let x = 3; 
-
-function function1(){ 
-
-    let x = 1; 
-
-    console.log(x); 
-
-} 
-
-function function2(){ 
-
-    let x = 2; 
-
-    console.log(x); 
-
-} 
-
-function1(); 
-
-function2(); 
-
-// Local variables get looked for first, and then afterwards global variables. 
-
-// In the absence of local variables, global variables will be used. 
-
-1 
-
-2 
+- Even though there is a global variable `let x = 3`, each function declares its own local `let x` variable.
+- JavaScript looks for **local variables first**, and then checks for global variables. This is known as *variable shadowing* -- the local variable "shadows" the global one.
+- `function1()` prints `1` (its local `x`) and `function2()` prints `2` (its local `x`), ignoring the global `x = 3`.
+- In the absence of local variables, global variables will be used instead.

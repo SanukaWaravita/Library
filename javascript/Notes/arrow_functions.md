@@ -1,144 +1,230 @@
-A concise way to write function expressions. 
-
- 
-
-Good for simple functions that you use only once. 
-
- 
-
-Syntax: 
-
- 
-
-(parameters) => some code 
+[< Back to Station](../station.md)
 
 ---
 
-const hello = () => console.log("Hello"); 
+# Arrow Functions
 
- 
+- An **arrow function** is a concise way to write *function expressions*.
 
-hello(); 
+- They are good for simple functions that you use only once.
 
-Hello 
+- Syntax: `(parameters) => some code`
 
+---
 
-const hello = (name) => console.log(`Hello ${name}`); 
+## Basic Arrow Function (No Parameters)
 
- 
+```javascript
+const hello = () => console.log("Hello");
 
-hello("Gojo"); 
+hello();
+```
 
-Hello Gojo 
+- Output:
 
+    ```
+    Hello
+    ```
 
-const hello = (name) => {console.log(`Hello ${name}`) 
+- The statement `const hello = () => console.log("Hello");` declares a constant `hello` and assigns it an arrow function that takes no parameters and logs `"Hello"` to the console.
 
-                         console.log(`You are old!`)}; 
+- The statement `hello();` calls the arrow function, which outputs `Hello`.
 
- 
+---
 
-hello("Gojo"); 
+## Arrow Function with One Parameter
 
-Hello Gojo 
+```javascript
+const hello = (name) => console.log(`Hello ${name}`);
 
-You are old! 
+hello("Gojo");
+```
 
+- Output:
 
-const hello = (name, age) => {console.log(`Hello ${name}`) 
+    ```
+    Hello Gojo
+    ```
 
-                              console.log(`You are ${age} years old!`)}; 
+- The statement `const hello = (name) => console.log(`Hello ${name}`);` declares an arrow function that takes one parameter `name` and uses a *template literal* to log a greeting.
 
- 
+- The statement `hello("Gojo");` calls the function with `"Gojo"` as the argument, outputting `Hello Gojo`.
 
-hello("Gojo", 21); 
+---
 
-Hello Gojo 
+## Arrow Function with Multiple Statements
 
-You are 21 years old! 
+```javascript
+const hello = (name) => {console.log(`Hello ${name}`)
+                         console.log(`You are old!`)};
 
+hello("Gojo");
+```
 
-setTimeout( () => console.log("Hello"), 3000); 
+- Output:
 
-Hello 
+    ```
+    Hello Gojo
+    You are old!
+    ```
 
-Displays "Hello" after 3 s/ 3000 ms. 
+- When an arrow function has **multiple statements**, you need to wrap them in curly braces `{}`.
 
- 
+- The function logs two messages: the greeting and `"You are old!"`.
 
-Same as: 
+---
 
- 
+## Arrow Function with Multiple Parameters
 
-setTimeout(function() 
+```javascript
+const hello = (name, age) => {console.log(`Hello ${name}`)
+                              console.log(`You are ${age} years old!`)};
 
-{ 
+hello("Gojo", 21);
+```
 
-    console.log("Hello"); 
+- Output:
 
-}, 3000); 
+    ```
+    Hello Gojo
+    You are 21 years old!
+    ```
 
+- The arrow function takes two parameters: `name` and `age`.
 
-const numbers = [1, 2, 3, 4, 5, 6]; 
+- The statement `hello("Gojo", 21);` passes `"Gojo"` as `name` and `21` as `age`, and the function logs both messages using those values.
 
- 
+---
 
-const squares = numbers.map( (element) => Math.pow(element, 2)); 
+## Arrow Functions with setTimeout
 
- 
+```javascript
+setTimeout( () => console.log("Hello"), 3000);
+```
 
-console.log(squares); 
+- Output:
 
-[1, 4, 9, 16, 25, 36] 
+    ```
+    Hello
+    ```
 
+- This displays `"Hello"` after 3 seconds (3000 milliseconds).
 
-const numbers = [1, 2, 3, 4, 5, 6]; 
+- The arrow function `() => console.log("Hello")` is passed as a *callback* to `setTimeout`.
 
- 
+- This is the same as writing it with a traditional function expression:
 
-const cubes = numbers.map( (element) => Math.pow(element, 3)); 
+```javascript
+setTimeout(function()
+{
+    console.log("Hello");
+}, 3000);
+```
 
- 
+---
 
-console.log(cubes); 
+## Arrow Functions with map (Squares)
 
-[1, 8, 27, 64, 125, 216] 
+```javascript
+const numbers = [1, 2, 3, 4, 5, 6];
 
+const squares = numbers.map( (element) => Math.pow(element, 2));
 
-const numbers = [1, 2, 3, 4, 5, 6]; 
+console.log(squares);
+```
 
- 
+- Output:
 
-const evenNums = numbers.filter( (element) => element % 2 === 0); 
+    ```
+    [1, 4, 9, 16, 25, 36]
+    ```
 
- 
+- The `map()` method creates a new array by applying the arrow function to each element of `numbers`.
 
-console.log(evenNums); 
+- The statement `Math.pow(element, 2)` raises each element to the power of `2`, producing the square of each number.
 
-[2, 4, 6] 
+---
 
+## Arrow Functions with map (Cubes)
 
-const numbers = [1, 2, 3, 4, 5, 6]; 
+```javascript
+const numbers = [1, 2, 3, 4, 5, 6];
 
- 
+const cubes = numbers.map( (element) => Math.pow(element, 3));
 
-const oddNums = numbers.filter( (element) => element % 2 !== 0); 
+console.log(cubes);
+```
 
- 
+- Output:
 
-console.log(oddNums); 
+    ```
+    [1, 8, 27, 64, 125, 216]
+    ```
 
-[1, 3, 5] 
+- Similar to the squares example, but `Math.pow(element, 3)` raises each element to the power of `3`, producing the cube of each number.
 
+---
 
-const numbers = [1, 2, 3, 4, 5, 6]; 
+## Arrow Functions with filter (Even Numbers)
 
- 
+```javascript
+const numbers = [1, 2, 3, 4, 5, 6];
 
-const total = numbers.reduce( (accumulator, element) => accumulator + element); 
+const evenNums = numbers.filter( (element) => element % 2 === 0);
 
- 
+console.log(evenNums);
+```
 
-console.log(total); 
+- Output:
 
-21 
+    ```
+    [2, 4, 6]
+    ```
+
+- The `filter()` method creates a new array containing only elements that pass the test in the arrow function.
+
+- The expression `element % 2 === 0` checks if the element is *even* (divisible by `2` with no remainder).
+
+---
+
+## Arrow Functions with filter (Odd Numbers)
+
+```javascript
+const numbers = [1, 2, 3, 4, 5, 6];
+
+const oddNums = numbers.filter( (element) => element % 2 !== 0);
+
+console.log(oddNums);
+```
+
+- Output:
+
+    ```
+    [1, 3, 5]
+    ```
+
+- The expression `element % 2 !== 0` checks if the element is *odd* (has a remainder when divided by `2`).
+
+---
+
+## Arrow Functions with reduce
+
+```javascript
+const numbers = [1, 2, 3, 4, 5, 6];
+
+const total = numbers.reduce( (accumulator, element) => accumulator + element);
+
+console.log(total);
+```
+
+- Output:
+
+    ```
+    21
+    ```
+
+- The `reduce()` method reduces the array to a single value by applying the arrow function cumulatively.
+
+- The `accumulator` holds the running total, and `element` is the current element being processed. Each iteration adds `element` to the `accumulator`.
+
+- The final result is `1 + 2 + 3 + 4 + 5 + 6 = 21`.
