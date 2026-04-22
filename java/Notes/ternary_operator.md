@@ -1,3 +1,7 @@
+[< Back to Station](../station.md)
+
+---
+
 # Ternary Operator
 
 - The *ternary operator* `?` is a shorthand for an `if`-`else` statement. It returns one of two values depending on whether a condition is true or false.

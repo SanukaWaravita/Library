@@ -1,3 +1,7 @@
+[< Back to Station](../../station.md)
+
+---
+
 # ArrayLists
 
 - An *ArrayList* is a **resizable array** that stores objects. Arrays are fixed in size, but ArrayLists can change in size dynamically.

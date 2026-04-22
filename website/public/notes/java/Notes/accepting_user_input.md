@@ -1,3 +1,7 @@
+[< Back to Station](../station.md)
+
+---
+
 - This is done using 'scanner', which is usually included in your Java utility pack of your library; this class has to be imported before being able to use it.
 
 # Scanner Class

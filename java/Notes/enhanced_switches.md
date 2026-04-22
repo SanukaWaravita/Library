@@ -1,3 +1,7 @@
+[< Back to Station](../station.md)
+
+---
+
 # Enhanced Switches
 
 - *Enhanced switches* are a replacement to many `else if` statements (Java 14 feature).

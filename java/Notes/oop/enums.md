@@ -1,3 +1,7 @@
+[< Back to Station](../../station.md)
+
+---
+
 # Enums
 
 An *enumeration* (enum) is a special kind of class that represents a **fixed set of constants**. Enums improve code readability and are easy to maintain. They are also more efficient with `switch` statements when comparing values, as opposed to comparing `String` literals.

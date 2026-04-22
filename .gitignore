@@ -1,9 +1,9 @@
-# Local development files
-project-todo.md
-improvements-by-code-rabbit/
-documents\SAD_Note_Refinement_prompt.md
-system_analysis_and_design\SAD-Refinement-Checklist.md
+# Dependencies
+node_modules/
 
+# Build output
+dist/
+dist-ssr/
 
 # IDE and Editor files
 .vscode/
@@ -20,5 +20,12 @@ desktop.ini
 # Temporary files
 *.tmp
 *.temp
-system_analysis_and_design/SAD-Refinement-Checklist.md
-documents/SAD_Note_Refinement_prompt.md
+*.local
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+
+# Archive (local dev artifacts, not deployed)
+_archive/

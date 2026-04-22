@@ -1,3 +1,7 @@
+[< Back to Station](../station.md)
+
+---
+
 # Switches
 
 - An efficient replacement to many else-if statements.

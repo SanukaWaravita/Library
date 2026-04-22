@@ -1,3 +1,7 @@
+[< Back to Station](../station.md)
+
+---
+
 # Methods
 
 - A *method* is a block of reusable code that is executed when called.

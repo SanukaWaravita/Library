@@ -1,3 +1,7 @@
+[< Back to Station](../station.md)
+
+---
+
 # Substrings
 
 - The `.substring()` method is used to extract a portion of a string.

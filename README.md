@@ -1,41 +1,41 @@
-# 📚 Personal Knowledge Library
+# Library
 
-A comprehensive, organized collection of study notes and reference materials covering various computer science and programming topics. This repository serves as a centralized knowledge base for quick reference and continuous learning.
+A personal knowledge base of study notes covering Java, JavaScript, and System Analysis & Design.
 
----
+## Navigation
 
-## 🎯 Purpose
+Start at **[station.md](station.md)** to browse all notes.
 
-This library is designed to:
-- **Document Learning** - Capture key concepts, syntax, and best practices across multiple domains
-- **Quick Reference** - Provide fast access to commonly needed information
-- **Knowledge Retention** - Consolidate notes from courses, tutorials, and practical experience
-- **Progressive Learning** - Build upon foundational concepts systematically
+| Subject | Station | Notes |
+|---------|---------|-------|
+| Java (Core + OOP) | [java/station.md](java/station.md) | 61 notes |
+| JavaScript | [javascript/station.md](javascript/station.md) | 18 notes |
+| System Analysis & Design | [system_analysis_and_design/station.md](system_analysis_and_design/station.md) | 60+ notes |
 
----
+Each note has a **"Back to Station"** link at the top for quick navigation back to its subject hub.
 
-## 📂 Main Topics
+## Project Structure
 
-### 💻 **JavaScript**
-Complete reference guide covering JavaScript fundamentals, including variables, operators, control flow, built-in methods, and user interaction patterns. Perfect for quick syntax lookups and concept reviews.
+```
+java/                          Java notes (core + OOP + Spring Boot)
+javascript/                    JavaScript notes + Node.js
+system_analysis_and_design/    SAD coursework (9 modules)
+website/                       React app for interactive browsing
+station.md                     Main navigation hub
+```
 
-### 🏢 **System Analysis and Design**
-Notes on systems thinking, system types and classifications, and system modeling approaches. Covers theoretical foundations and practical frameworks for understanding and designing systems.
+## Web App
 
----
+The `website/` folder contains a React + Vite + TypeScript app for browsing notes interactively.
 
-## 📑 [View Complete Index](index.md)
+```bash
+cd website
+npm install
+npm run dev
+```
 
-Browse the full catalog of notes organized by topic and subtopic.
+The app automatically syncs notes from the source folders during build.
 
----
+## Deployment
 
-## 🚀 Getting Started
-
-1. Use the [index](index.md) to navigate to specific topics
-2. Each note is self-contained with explanations and examples
-3. Topics build progressively from fundamentals to advanced concepts
-
----
-
-**Last Updated:** February 2026
+Pushing to `main` triggers a GitHub Actions workflow that builds and deploys the web app to GitHub Pages. See [.github/workflows/deploy.yml](.github/workflows/deploy.yml).

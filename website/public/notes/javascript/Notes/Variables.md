@@ -1,3 +1,7 @@
+[< Back to Station](../station.md)
+
+---
+
 # VARIABLES
 
 - It is a container that stores a value; it behaves as if it WERE the value it contains.

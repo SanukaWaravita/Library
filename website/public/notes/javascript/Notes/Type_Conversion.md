@@ -1,3 +1,7 @@
+[< Back to Station](../station.md)
+
+---
+
 # Type Conversion
 
 - Changing the datatype of a value to another.

@@ -1,3 +1,7 @@
+[< Back to Station](../station.md)
+
+---
+
 # Checking Whether a Number is Even or Odd
 
 ```java
